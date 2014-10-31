@@ -10,3 +10,16 @@
     width: 300px;
   }
 }
+.header-main_title {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.salutation {
+  font-weight: 700;
+}
+.adjective {
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  color: $pink;
+  text-shadow: 3px 3px 5px grey;
+}

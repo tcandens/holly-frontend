@@ -10,3 +10,12 @@ body, html {
   max-width: 100%;
   @include clearfix;
 }
+
+.logo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url('../img/logo.png');
+  background-size: contain;
+  @include hide-text;
+}

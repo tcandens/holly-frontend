@@ -17,6 +17,19 @@ body, html {
     display: table;
     clear: both; }
 
+.logo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url("../img/logo.png");
+  background-size: contain;
+  overflow: hidden; }
+  .logo:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
+
 .header {
   position: relative;
   height: 100%;
@@ -36,6 +49,7 @@ body, html {
   right: 0;
   top: 0; }
 
+/* COLORS */
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
   background-size: cover;
@@ -46,7 +60,24 @@ body, html {
   .header-main .header_figure-right {
     width: 300px; }
 
+.header-main_title {
+  margin: 0 auto;
+  max-width: 80%; }
+
+.salutation {
+  font-weight: 700; }
+
+.adjective {
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  color: #f4cdd9;
+  text-shadow: 3px 3px 5px grey; }
+
 .nav-overlay {
   position: absolute; }
+
+html, body {
+  font-family: 'Quicksand', futura, 'Open Sans', sans-serif;
+  font-weight: normal; }
 
 /*# sourceMappingURL=main.css.map */
