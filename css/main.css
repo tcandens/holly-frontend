@@ -1,3 +1,25 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
+body, html {
+  margin: 0; }
+
+body {
+  height: 100%;
+  width: 100%; }
+
+.container {
+  height: 100%;
+  width: 100%; }
+
+.header {
+  height: 100%;
+  width: 100%; }
+
+.header-main {
+  background-image: url("../img/header-main/bg.jpg");
+  background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */
