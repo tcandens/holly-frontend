@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header_figure-left, .header_figure-right {
+  position: absolute;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.header_figure-left {
+  left: 1em;
+  bottom: 1em;
+}
+
+.header_figure-right {
+  right: 0;
+  top: 0;
+}

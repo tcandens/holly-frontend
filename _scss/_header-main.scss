@@ -1,0 +1,12 @@
+.header-main {
+  background-image: url('../img/header-main/bg.jpg');
+  background-size: cover;
+  height: 90%;
+  overflow: hidden;
+  .header_figure-left {
+    width: 200px;
+  }
+  .header_figure-right {
+    width: 300px;
+  }
+}

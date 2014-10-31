@@ -1,58 +1,52 @@
-/*
-Error: Properties are only allowed within rules, directives, mixin includes, or other properties.
-        on line 10 of bower_components/bourbon/dist/addons/_prefixer.scss
-        from line 4 of _scss/main.scss
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-5: @import 'header';
-6: 
-7: @import '_modules/header-main';
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
 
-Backtrace:
-bower_components/bourbon/dist/addons/_prefixer.scss:10
-_scss/main.scss:4
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:13:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:38:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:38:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:64:in `visit_import'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:57:in `visit_root'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:24:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:37:in `css_tree'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:396:in `run'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:62:in `process_result'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/base.rb:52:in `parse'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/base.rb:19:in `parse!'
-/var/lib/gems/1.9.1/gems/sass-3.4.5/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Properties are only allowed within rules, directives, mixin includes, or other properties.\A         on line 10 of bower_components/bourbon/dist/addons/_prefixer.scss\A         from line 4 of _scss/main.scss\A \A 5: @import 'header';\A 6: \A 7: @import '_modules/header-main';"; }
+.container {
+  height: 100%;
+  max-width: 100%; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.header {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+.header_figure-left, .header_figure-right {
+  position: absolute; }
+  .header_figure-left img, .header_figure-right img {
+    width: 100%;
+    height: auto; }
+
+.header_figure-left {
+  left: 1em;
+  bottom: 1em; }
+
+.header_figure-right {
+  right: 0;
+  top: 0; }
+
+.header-main {
+  background-image: url("../img/header-main/bg.jpg");
+  background-size: cover;
+  height: 90%;
+  overflow: hidden; }
+  .header-main .header_figure-left {
+    width: 200px; }
+  .header-main .header_figure-right {
+    width: 300px; }
+
+.nav-overlay {
+  position: absolute; }
+
+/*# sourceMappingURL=main.css.map */
