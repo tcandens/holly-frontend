@@ -1,9 +1,9 @@
 @import '../bower_components/bourbon/dist/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
+@import 'vars';
 @import 'global';
 @import 'header';
-@import 'vars';
 
 @import 'header-main';
 @import 'navigation';

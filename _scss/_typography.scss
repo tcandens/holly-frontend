@@ -1,4 +1,7 @@
 html, body {
-  font-family: 'Quicksand', futura, 'Open Sans', sans-serif;
-  font-weight: normal;
+  font-family: $quicksand;
+  font-weight: 400;
+}
+h1 {
+  font-size: 2em;
 }

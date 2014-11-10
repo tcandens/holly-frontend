@@ -4,22 +4,45 @@
   height: 90%;
   overflow: hidden;
   .header_figure-left {
-    width: 200px;
+    width: 300px;
+    height: 400px;
+    background-image: url('../img/header-main/chance-postit.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
   }
   .header_figure-right {
-    width: 300px;
+    width: 500px;
+    height: 800px;
+    margin-right: -100px;
+    background-image: url('../img/header-main/notebook.png');
+    background-size: contain;
+    background-position: top 100px;
+    background-repeat: no-repeat;
   }
 }
 .header-main_title {
+  position: relative;
+  top: 50%;
   margin: 0 auto;
   max-width: 80%;
+  text-align: center;
+  @include transform(translate3d(0,-50%,0));
 }
 .salutation {
   font-weight: 700;
+  line-height: 1;
+}
+.intro {
+  line-height: 1;
+  font-weight: 400;
 }
 .adjective {
-  font-family: 'Raleway';
+  font-family: $futura;
   text-transform: uppercase;
+  font-size: 4em;
+  line-height: 0;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
 }
