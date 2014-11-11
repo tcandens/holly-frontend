@@ -1,4 +1,4 @@
-body, html {
+html, body {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -16,8 +16,13 @@ body, html {
 .logo {
   width: 140px;
   height: 140px;
-  margin: 0 auto;
+  margin: 0.5em auto;
   background-image: url('../img/logo.png');
   background-size: contain;
+}
+.ir {
   @include hide-text;
+}
+b {
+  font-weight: 700;
 }

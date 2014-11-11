@@ -10,7 +10,7 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    z-index: 0;
+    @include transform(rotate(-20deg));
   }
   .header_figure-right {
     width: 500px;
@@ -30,19 +30,45 @@
   text-align: center;
   @include transform(translate3d(0,-50%,0));
 }
-.salutation {
-  font-weight: 700;
-  line-height: 1;
+.salutation, .intro, .adjective {
+  margin: 0;
 }
 .intro {
-  line-height: 1;
-  font-weight: 400;
+  display: inline-block;
+  max-width: 10em;
 }
 .adjective {
   font-family: $futura;
   text-transform: uppercase;
-  font-size: 4em;
-  line-height: 0;
+  font-size: 5em;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
+}
+
+.googly-eye-divider {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  &:before, &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 2px;
+    // border-bottom: 2px solid $offblack;
+    background: $offblack;
+    z-index: 9999;
+  }
+  &:before {
+    top: 18px;
+    left: -145px;
+  }
+  &:after {
+    top: 18px;
+    left: 65px;
+  }
 }
