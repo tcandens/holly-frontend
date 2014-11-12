@@ -13,7 +13,7 @@ $container-width: $item-diameter * $pseudo-columns + ( $margin * $pseudo-columns
   max-width: $list-width;
   list-style: none;
   // background: grey; // Debugger
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 .project-list_container { // Container within the project-list 'viewport' that allows rows to overflow, be hidden, and then split
