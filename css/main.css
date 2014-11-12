@@ -42,7 +42,8 @@ b {
 .header {
   position: relative;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 3em; }
 
 .header_figure-left, .header_figure-right {
   position: absolute; }
@@ -164,23 +165,23 @@ h1 {
   overflow-y: hidden; }
 
 .project-list_container {
-  width: 1366.66667px; }
+  width: 1416.66667px; }
 
 .project-list_item {
   display: block;
   position: relative;
   float: left;
-  margin-right: 20px;
-  margin-bottom: 202.66667px;
-  width: 253.33333px;
-  height: 253.33333px;
+  margin-right: 50px;
+  margin-bottom: 186.66667px;
+  width: 233.33333px;
+  height: 233.33333px;
   list-style: none; }
   .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-    -webkit-transform: translate3d(-683px, 228px, 0);
-    -moz-transform: translate3d(-683px, 228px, 0);
-    -ms-transform: translate3d(-683px, 228px, 0);
-    -o-transform: translate3d(-683px, 228px, 0);
-    transform: translate3d(-683px, 228px, 0); }
+    -webkit-transform: translate3d(-708.33333px, 210px, 0);
+    -moz-transform: translate3d(-708.33333px, 210px, 0);
+    -ms-transform: translate3d(-708.33333px, 210px, 0);
+    -o-transform: translate3d(-708.33333px, 210px, 0);
+    transform: translate3d(-708.33333px, 210px, 0); }
 
 .project-list_title {
   position: absolute;
