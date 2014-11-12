@@ -1,13 +1,23 @@
 .project-list {
+  margin: 0 auto;
+  max-width: 40em;
   list-style: none;
 }
 .project-list_item {
+  display: inline-block;
   position: relative;
+  margin: 1em 1em;
+  width: 10em;
+  height: 10em;
   list-style: none;
 }
 .project-list_title {
   position: absolute;
-  @include hide-text;
+  opacity: 0;
+}
+.project-list_thumbnail {
+  width: 100%;
+  height: 100%;
 }
 .project-list_thumbnail-hover {
   position: absolute;
