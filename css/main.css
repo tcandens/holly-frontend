@@ -154,18 +154,33 @@ h1 {
   margin: 0;
   background: #f8d7e1; }
 
+/* Project list grid variables */
 .project-list {
   margin: 0 auto;
-  max-width: 40em;
-  list-style: none; }
+  padding: 0;
+  max-width: 800px;
+  list-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+.project-list_container {
+  width: 1366.66667px; }
 
 .project-list_item {
-  display: inline-block;
+  display: block;
   position: relative;
-  margin: 1em 1em;
-  width: 10em;
-  height: 10em;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 202.66667px;
+  width: 253.33333px;
+  height: 253.33333px;
   list-style: none; }
+  .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
+    -webkit-transform: translate3d(-683px, 228px, 0);
+    -moz-transform: translate3d(-683px, 228px, 0);
+    -ms-transform: translate3d(-683px, 228px, 0);
+    -o-transform: translate3d(-683px, 228px, 0);
+    transform: translate3d(-683px, 228px, 0); }
 
 .project-list_title {
   position: absolute;
