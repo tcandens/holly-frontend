@@ -9,6 +9,7 @@ $container-width: $item-diameter * $pseudo-columns + ( $margin * $pseudo-columns
 
 .project-list {
   margin: 0 auto;
+  margin-bottom: -$item-diameter + 200px;
   padding: 0;
   max-width: $list-width;
   list-style: none;
