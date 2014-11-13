@@ -37,8 +37,26 @@ html, body {
     height: 100%; }
 
 .bold {
-  font-weight: 700; }
+  font-family: 'quicksandbold'; }
 
+@font-face {
+  font-family: 'quicksandregular';
+  src: url("../fonts/quicksand-regular-webfont.eot");
+  src: url("../fonts/quicksand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-regular-webfont.woff2") format("woff2"), url("../fonts/quicksand-regular-webfont.woff") format("woff"), url("../fonts/quicksand-regular-webfont.ttf") format("truetype"), url("../fonts/quicksand-regular-webfont.svg#quicksandregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quicksandbold';
+  src: url("../fonts/quicksand-bold-webfont.eot");
+  src: url("../fonts/quicksand-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-bold-webfont.woff2") format("woff2"), url("../fonts/quicksand-bold-webfont.woff") format("woff"), url("../fonts/quicksand-bold-webfont.ttf") format("truetype"), url("../fonts/quicksand-bold-webfont.svg#quicksandbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("../fonts/raleway-bold-webfont.eot");
+  src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 .header {
   position: relative;
   height: 100%;
@@ -96,7 +114,7 @@ html, body {
   max-width: 14em; }
 
 .adjective {
-  font-family: "Raleway", sans-serif;
+  font-family: "ralewaybold", sans-serif;
   text-transform: uppercase;
   font-size: 4em;
   color: #f8d7e1;
@@ -123,11 +141,17 @@ html, body {
     top: 18px;
     left: 65px; }
 
+.shuffle-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent; }
+
 .nav-overlay {
   position: absolute; }
 
 html, body {
-  font-family: "Quicksand", futura, "Open Sans", sans-serif;
+  font-family: "quicksandregular", futura, "Open Sans", sans-serif;
   font-size: 1.3em;
   font-weight: 400; }
 
