@@ -43,7 +43,8 @@ b {
   position: relative;
   height: 100%;
   width: 100%;
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+  overflow: hidden; }
 
 .header_figure-left, .header_figure-right {
   position: absolute; }
@@ -58,9 +59,7 @@ b {
 
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
-  background-size: cover;
-  height: 100%;
-  overflow: hidden; }
+  background-size: cover; }
   .header-main .header_figure-left {
     width: 300px;
     height: 400px;
@@ -100,7 +99,7 @@ b {
 .intro {
   display: inline-block;
   margin-bottom: 0.5em;
-  max-width: 10em; }
+  max-width: 14em; }
 
 .adjective {
   font-family: "Raleway", sans-serif;
@@ -115,16 +114,14 @@ b {
   height: 40px;
   margin: 50px auto;
   background-color: white;
-  border-radius: 50%;
-  overflow: hidden; }
+  border-radius: 50%; }
   .googly-eye-divider:before, .googly-eye-divider:after {
     display: block;
     position: absolute;
     content: "";
     width: 120px;
     height: 2px;
-    background: #343433;
-    z-index: 9999; }
+    background: #343433; }
   .googly-eye-divider:before {
     top: 18px;
     left: -145px; }
@@ -159,29 +156,29 @@ h1 {
 .project-list {
   margin: 0 auto;
   padding: 0;
-  max-width: 800px;
+  max-width: 1000px;
   list-style: none;
   overflow-x: hidden;
   overflow-y: hidden; }
 
 .project-list_container {
-  width: 1416.66667px; }
+  width: 1750px; }
 
 .project-list_item {
   display: block;
   position: relative;
   float: left;
   margin-right: 50px;
-  margin-bottom: 186.66667px;
-  width: 233.33333px;
-  height: 233.33333px;
+  margin-bottom: 300px;
+  width: 300px;
+  height: 300px;
   list-style: none; }
   .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-    -webkit-transform: translate3d(-708.33333px, 210px, 0);
-    -moz-transform: translate3d(-708.33333px, 210px, 0);
-    -ms-transform: translate3d(-708.33333px, 210px, 0);
-    -o-transform: translate3d(-708.33333px, 210px, 0);
-    transform: translate3d(-708.33333px, 210px, 0); }
+    -webkit-transform: translate3d(-875px, 300px, 0);
+    -moz-transform: translate3d(-875px, 300px, 0);
+    -ms-transform: translate3d(-875px, 300px, 0);
+    -o-transform: translate3d(-875px, 300px, 0);
+    transform: translate3d(-875px, 300px, 0); }
 
 .project-list_title {
   position: absolute;

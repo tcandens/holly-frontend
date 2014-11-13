@@ -1,8 +1,6 @@
 .header-main {
   background-image: url('../img/header-main/bg.jpg');
   background-size: cover;
-  height: 100%;
-  overflow: hidden;
   .header_figure-left {
     width: 300px;
     height: 400px;
@@ -36,7 +34,7 @@
 .intro {
   display: inline-block;
   margin-bottom: 0.5em;
-  max-width: 10em;
+  max-width: 14em;
 }
 .adjective {
   font-family: $futura;
@@ -53,7 +51,6 @@
   margin: 50px auto;
   background-color: white;
   border-radius: 50%;
-  overflow: hidden;
   &:before, &:after {
     display: block;
     position: absolute;
@@ -61,7 +58,6 @@
     width: 120px;
     height: 2px;
     background: $offblack;
-    z-index: 9999;
   }
   &:before {
     top: 18px;
