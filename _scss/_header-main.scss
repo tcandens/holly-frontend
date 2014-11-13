@@ -22,11 +22,11 @@
 }
 .header-main_title {
   position: relative;
-  top: 50%;
-  margin: 0 auto;
+  // top: 50%;
+  margin: 1em auto;
   max-width: 80%;
   text-align: center;
-  @include transform(translate3d(0,-50%,0));
+  // @include transform(translate3d(0,-50%,0));
 }
 .salutation, .intro, .adjective {
   margin: 0;
@@ -39,7 +39,7 @@
 .adjective {
   font-family: $futura;
   text-transform: uppercase;
-  font-size: 5em;
+  font-size: 4em;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
 }

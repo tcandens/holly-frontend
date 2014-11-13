@@ -1,0 +1,47 @@
+.about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/header-main/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $grey;
+}
+
+.contact-icons {
+  margin: 0 auto;
+  padding-top: 2em;
+  max-width: 30em;
+  list-style: none;
+  @include clearfix();
+  li {
+    display: block;
+    float: left;
+    width: 33%;
+  }
+}
+
+.about-copy {
+  margin: 1em auto;
+  max-width: 80em;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: $pink;
+}
+
+.social-icons {
+  margin: 0 auto;
+  width: 800px;
+  list-style:  none;
+}
+.social-icons_item {
+  display: block;
+  float: left;
+}
