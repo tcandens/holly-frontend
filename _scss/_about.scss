@@ -11,13 +11,31 @@
 .contact-icons {
   margin: 0 auto;
   padding-top: 2em;
-  max-width: 30em;
   list-style: none;
   @include clearfix();
   li {
     display: block;
     float: left;
-    width: 33%;
+  }
+}
+.contact-icons_item {
+  width: 200px;
+  height: 200px;
+}
+
+.contact-icons_item-link {
+  display: block;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &[data-link='phone'] {
+    background-image: url('../img/phone-icon.svg');
   }
 }
 
@@ -32,7 +50,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 150px;
   background: $pink;
 }
 
@@ -43,5 +61,7 @@
 }
 .social-icons_item {
   display: block;
+  width: 100px;
+  height: 100px;
   float: left;
 }
