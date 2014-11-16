@@ -4,13 +4,19 @@
   width: 100%;
   height: 1em;
   background: white;
-}
-.project-filter_list {
-  list-style: none;
   text-align: center;
-  vertical-align: middle;
 }
-.project-filter_list-item {
+.project-filter_input {
+  display: none;
+}
+.project-filter_label {
   display: inline-block;
-  padding: 0 2em;
+  padding: 0.3em 1em;
+  font-family: $futura;
+  border-radius: 10px;
+  @include transition(all 300ms ease);
+  &:hover {
+    background: $offblack;
+    color: white;
+  }
 }
