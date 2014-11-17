@@ -1,4 +1,4 @@
-// Nav Overlay Testing
+// Nav Overlay Testing ---- DELETE WHEN DONE STYLING OVERLAY
 var doc = $(document.body);
 doc.addClass("TEST_nav-overlay");
 

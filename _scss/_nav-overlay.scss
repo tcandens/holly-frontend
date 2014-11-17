@@ -29,25 +29,30 @@
     font-size: 4em;
     text-decoration: none;
     color: inherit;
-    &:after {
+    &:hover {
+      &::after {
+        background: $blue;
+      }
+    }
+    &::after {
       display: block;
       position: relative;
       left: 50%;
       content: "";
       width: 100px;
       height: 20px;
-      // background: $offblack;
+      background: $offblack;
       border-radius: 10px;
       @include transform(translate3d(-50%,0,0));
     }
     &:nth-child(3n) {
       &:after {
-        background: $blue;
+        // background: $blue;
       }
     }
     &:nth-child(n) {
       &:after {
-        background: $coral;
+        // background: $coral;
       }
     }
   }

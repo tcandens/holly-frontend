@@ -191,23 +191,22 @@ h1 {
     font-size: 4em;
     text-decoration: none;
     color: inherit; }
-    .nav-overlay_list a:after {
+    .nav-overlay_list a:hover::after {
+      background: #92c3ce; }
+    .nav-overlay_list a::after {
       display: block;
       position: relative;
       left: 50%;
       content: "";
       width: 100px;
       height: 20px;
+      background: #343433;
       border-radius: 10px;
       -webkit-transform: translate3d(-50%, 0, 0);
       -moz-transform: translate3d(-50%, 0, 0);
       -ms-transform: translate3d(-50%, 0, 0);
       -o-transform: translate3d(-50%, 0, 0);
       transform: translate3d(-50%, 0, 0); }
-    .nav-overlay_list a:nth-child(3n):after {
-      background: #92c3ce; }
-    .nav-overlay_list a:nth-child(n):after {
-      background: #f79e86; }
 
 /* Project list grid variables */
 .project-list {
