@@ -1,7 +1,8 @@
 .about {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   background-image: url('../img/header-main/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,11 +27,11 @@
 .contact-icons_item-link {
   display: block;
   position: relative;
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
+  border: 0;  // IR
+  font: 0/0 a;  // IR
+  text-shadow: none; // IR
+  color: transparent;  // IR
+  background-color: transparent;  // IR
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -62,27 +63,57 @@
   margin: auto;
   margin-top: 0;
   margin-bottom: 1em;
-  max-width: 80em;
+  max-width: 42em;
   text-align: center;
 }
 
 .footer {
-  position: absolute;
+  position: relative;
+  margin-top: 1em;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px;
   background: $pink;
 }
 
 .social-icons {
-  margin: 0 auto;
+  margin: 0.3em auto;
   width: 800px;
   list-style:  none;
+  text-align: center;
 }
 .social-icons_item {
-  display: block;
+  display: inline-block;
   width: 100px;
   height: 100px;
-  float: left;
+  padding: 10px;
+  // float: left;
+}
+.social-icons_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include transition(opacity 300ms ease);
+  @include hide-text;
+  &[href^="http://www.facebook"] {
+    background-image: url('../img/icons/facebook.svg');
+  }
+  &[href^="http://www.twitter"] {
+    background-image: url('../img/icons/twitter.svg');
+  }
+  &[href^="http://www.linkedin"] {
+    background-image: url('../img/icons/linkedin.svg');
+  }
+  &[href^="http://www.tumblr.com"] {
+    background-image: url('../img/icons/tumblr.svg');
+  }
+  &[href^="http://www.instagram.com"] {
+    background-image: url('../img/icons/instagram.svg');
+  }
+  &:hover {
+    opacity: 0.4;
+  }
 }
