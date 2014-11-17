@@ -11,5 +11,44 @@
   max-width: 100%;
   width: 100%;
   margin: 0;
-  background: $pink;
+  background: rgba($pink, 0.7);
+}
+.nav-overlay_list {
+  position: relative;
+  top: 50%;
+  @include transform(translate3d(0,-50%,0));
+  list-style: none;
+  li {
+    margin-bottom: 2em;
+    text-align: center;
+    max-width: 27em;
+  }
+  a {
+    position: relative;
+    font-family: $futura;
+    font-size: 4em;
+    text-decoration: none;
+    color: inherit;
+    &:after {
+      display: block;
+      position: relative;
+      left: 50%;
+      content: "";
+      width: 100px;
+      height: 20px;
+      // background: $offblack;
+      border-radius: 10px;
+      @include transform(translate3d(-50%,0,0));
+    }
+    &:nth-child(3n) {
+      &:after {
+        background: $blue;
+      }
+    }
+    &:nth-child(n) {
+      &:after {
+        background: $coral;
+      }
+    }
+  }
 }

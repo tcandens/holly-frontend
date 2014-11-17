@@ -147,9 +147,6 @@ html, body {
   height: 100%;
   background: transparent; }
 
-.nav-overlay {
-  position: absolute; }
-
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
   font-size: 1.3em;
@@ -173,7 +170,44 @@ h1 {
   max-width: 100%;
   width: 100%;
   margin: 0;
-  background: #f8d7e1; }
+  background: rgba(248, 215, 225, 0.7); }
+
+.nav-overlay_list {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  list-style: none; }
+  .nav-overlay_list li {
+    margin-bottom: 2em;
+    text-align: center;
+    max-width: 27em; }
+  .nav-overlay_list a {
+    position: relative;
+    font-family: "ralewaybold", sans-serif;
+    font-size: 4em;
+    text-decoration: none;
+    color: inherit; }
+    .nav-overlay_list a:after {
+      display: block;
+      position: relative;
+      left: 50%;
+      content: "";
+      width: 100px;
+      height: 20px;
+      border-radius: 10px;
+      -webkit-transform: translate3d(-50%, 0, 0);
+      -moz-transform: translate3d(-50%, 0, 0);
+      -ms-transform: translate3d(-50%, 0, 0);
+      -o-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0); }
+    .nav-overlay_list a:nth-child(3n):after {
+      background: #92c3ce; }
+    .nav-overlay_list a:nth-child(n):after {
+      background: #f79e86; }
 
 /* Project list grid variables */
 .project-list {
