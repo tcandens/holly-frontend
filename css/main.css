@@ -175,7 +175,7 @@ h1 {
 /* Project list grid variables */
 .project-list {
   margin: 0 auto;
-  margin-bottom: -100px;
+  margin-bottom: -200px;
   padding: 0;
   max-width: 1000px;
   list-style: none;
