@@ -1,5 +1,7 @@
+$footer-height: 100px;
 .about {
   position: relative;
+  margin-bottom: -$footer-height;
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -8,11 +10,14 @@
   background-repeat: no-repeat;
   color: $grey;
 }
-
+.about:after {
+  display: block;
+  content: "";
+}
 .contact-icons {
   margin: 0;
-  margin-bottom: 1em;
-  padding-top: 2em;
+  // margin-bottom: 1em;
+  // padding-top: 2em;
   list-style: none;
   text-align: center;
   @include clearfix();
@@ -74,12 +79,15 @@
 }
 .footer {
   position: relative;
-  margin-top: 1em;
+  // margin-top: 1em;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 140px;
+  // height: $footer-height;
   background: $pink;
+}
+.about:after, .footer {
+  height: $footer-height;
 }
 
 .social-icons {
