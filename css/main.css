@@ -283,9 +283,14 @@ h1 {
 .about-copy {
   margin: auto;
   margin-top: 0;
-  margin-bottom: 1em;
-  max-width: 42em;
+  margin-bottom: 2em;
   text-align: center; }
+  .about-copy p {
+    margin: 0 auto;
+    max-width: 42em; }
+
+.about-headline {
+  margin-bottom: 0.5em; }
 
 .footer {
   position: relative;
