@@ -161,8 +161,11 @@ h1 {
   font-weight: 400;
   line-height: 1; }
 
+.TEST_nav-overlay > * {
+  display: none; }
+
 .nav-overlay {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;

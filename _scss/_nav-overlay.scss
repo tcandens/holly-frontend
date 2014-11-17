@@ -1,5 +1,9 @@
-.nav-overlay {
+.TEST_nav-overlay > * {
   display: none;
+}
+
+.nav-overlay {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
