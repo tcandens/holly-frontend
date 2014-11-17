@@ -235,6 +235,9 @@ h1 {
   background-repeat: no-repeat;
   color: #58595b; }
 
+.about-center {
+  padding-top: 2em; }
+
 .about:after {
   display: block;
   content: ""; }
@@ -290,7 +293,8 @@ h1 {
   text-align: center; }
   .about-copy p {
     margin: 0 auto;
-    max-width: 42em; }
+    max-width: 42em;
+    margin-bottom: 1em; }
 
 .about-headline {
   margin-bottom: 0.5em; }

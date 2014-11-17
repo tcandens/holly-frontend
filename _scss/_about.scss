@@ -10,11 +10,13 @@ $footer-height: 100px;
   background-repeat: no-repeat;
   color: $grey;
 }
-// .about-center {
+.about-center {
+  padding-top: 2em;
 //   position: relative;
 //   margin-top: 50%;
 //   @include transform(translate3d(0,-50%,0));
-// }
+}
+
 .about:after {
   display: block;
   content: "";
@@ -77,6 +79,7 @@ $footer-height: 100px;
   p {
     margin: 0 auto;
     max-width: 42em;
+    margin-bottom: 1em;
   }
 }
 .about-headline {
