@@ -1,6 +1,6 @@
-// Nav Overlay Testing ---- DELETE WHEN DONE STYLING OVERLAY
-var doc = $(document.body);
-doc.addClass("TEST_nav-overlay");
+// // Nav Overlay Testing ---- DELETE WHEN DONE STYLING OVERLAY
+// var doc = $(document.body);
+// doc.addClass("TEST_nav-overlay");
 
 
 // Adjective Swapper
