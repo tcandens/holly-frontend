@@ -175,11 +175,11 @@ h1 {
 .nav-overlay_list {
   position: relative;
   top: 50%;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -o-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -55%, 0);
+  -moz-transform: translate3d(0, -55%, 0);
+  -ms-transform: translate3d(0, -55%, 0);
+  -o-transform: translate3d(0, -55%, 0);
+  transform: translate3d(0, -55%, 0);
   list-style: none; }
   .nav-overlay_list li {
     margin-bottom: 2em;
@@ -192,7 +192,12 @@ h1 {
     text-decoration: none;
     color: inherit; }
     .nav-overlay_list a:hover::after {
-      background: #92c3ce; }
+      background: #92c3ce;
+      -webkit-transform: translate3d(-50%, -10px, 0);
+      -moz-transform: translate3d(-50%, -10px, 0);
+      -ms-transform: translate3d(-50%, -10px, 0);
+      -o-transform: translate3d(-50%, -10px, 0);
+      transform: translate3d(-50%, -10px, 0); }
     .nav-overlay_list a::after {
       display: block;
       position: relative;
@@ -206,7 +211,10 @@ h1 {
       -moz-transform: translate3d(-50%, 0, 0);
       -ms-transform: translate3d(-50%, 0, 0);
       -o-transform: translate3d(-50%, 0, 0);
-      transform: translate3d(-50%, 0, 0); }
+      transform: translate3d(-50%, 0, 0);
+      -webkit-transition: all 400ms ease;
+      -moz-transition: all 400ms ease;
+      transition: all 400ms ease; }
 
 /* Project list grid variables */
 .project-list {

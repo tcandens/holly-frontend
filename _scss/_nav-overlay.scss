@@ -16,7 +16,7 @@
 .nav-overlay_list {
   position: relative;
   top: 50%;
-  @include transform(translate3d(0,-50%,0));
+  @include transform(translate3d(0,-55%,0));
   list-style: none;
   li {
     margin-bottom: 2em;
@@ -32,6 +32,7 @@
     &:hover {
       &::after {
         background: $blue;
+        @include transform(translate3d(-50%,-10px,0));
       }
     }
     &::after {
@@ -44,16 +45,7 @@
       background: $offblack;
       border-radius: 10px;
       @include transform(translate3d(-50%,0,0));
-    }
-    &:nth-child(3n) {
-      &:after {
-        // background: $blue;
-      }
-    }
-    &:nth-child(n) {
-      &:after {
-        // background: $coral;
-      }
+      @include transition(all 400ms ease);
     }
   }
 }
