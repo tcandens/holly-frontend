@@ -1,4 +1,8 @@
 .sass-cache
 bower_components/
 node_modules/
+<<<<<<< HEAD
 **/*.map
+=======
+*.css.map
+>>>>>>> dev
