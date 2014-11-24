@@ -1,470 +1,95 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after "...rgba($pink, 0.9": expected ")", was "`);"
+        on line 15 of _scss/_nav-overlay.scss
+        from line 12 of _scss/main.scss
 
-/* COLORS */
-/* FONT STACKS */
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  color: #343433;
-  font-size: 100%; }
+10:   left: 0;
+11:   height: 100%;
+12:   max-width: 100%;
+13:   width: 100%;
+14:   margin: 0;
+15:   background: rgba($pink, 0.9`);
+16:   opacity: 0;
+17:   z-index: 9;
+18:   @include transition(all 400ms ease);
+19: }
+20: 
 
-.container {
-  height: 100%;
-  max-width: 100%; }
-  .container:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.logo {
-  width: 140px;
-  height: 140px;
-  margin: 0.5em auto;
-  background-image: url("../img/logo.png");
-  background-size: contain; }
-
-.ir {
-  overflow: hidden; }
-  .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%; }
-
-.bold {
-  font-family: 'quicksandbold'; }
-
-@font-face {
-  font-family: 'quicksandregular';
-  src: url("../fonts/quicksand-regular-webfont.eot");
-  src: url("../fonts/quicksand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-regular-webfont.woff2") format("woff2"), url("../fonts/quicksand-regular-webfont.woff") format("woff"), url("../fonts/quicksand-regular-webfont.ttf") format("truetype"), url("../fonts/quicksand-regular-webfont.svg#quicksandregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'quicksandbold';
-  src: url("../fonts/quicksand-bold-webfont.eot");
-  src: url("../fonts/quicksand-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand-bold-webfont.woff2") format("woff2"), url("../fonts/quicksand-bold-webfont.woff") format("woff"), url("../fonts/quicksand-bold-webfont.ttf") format("truetype"), url("../fonts/quicksand-bold-webfont.svg#quicksandbold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'ralewaybold';
-  src: url("../fonts/raleway-bold-webfont.eot");
-  src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-.header {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 1em;
-  overflow: hidden; }
-
-.header_figure-left, .header_figure-right {
-  position: absolute; }
-
-.header_figure-left {
-  left: 1em;
-  bottom: 1em; }
-
-.header_figure-right {
-  right: 0;
-  top: 0; }
-
-.header-main {
-  background-image: url("../img/header-main/bg.jpg");
-  background-size: cover; }
-  .header-main .header_figure-left {
-    width: 300px;
-    height: 400px;
-    background-image: url("../img/header-main/chance-postit.png");
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
-  .header-main .header_figure-right {
-    width: 500px;
-    height: 800px;
-    margin-right: -100px;
-    background-image: url("../img/header-main/notebook.png");
-    background-size: contain;
-    background-position: top 100px;
-    background-repeat: no-repeat; }
-
-.header-main_title {
-  position: relative;
-  margin: 1em auto;
-  max-width: 80%;
-  text-align: center; }
-
-.salutation, .intro, .adjective {
-  margin: 0; }
-
-.intro {
-  display: inline-block;
-  margin-bottom: 0.5em;
-  max-width: 14em; }
-
-.adjective {
-  font-family: "ralewaybold", sans-serif;
-  text-transform: uppercase;
-  font-size: 4em;
-  color: #f8d7e1;
-  text-shadow: 3px 3px 5px grey; }
-
-.googly-eye-divider {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin: 50px auto;
-  background-color: white;
-  border-radius: 50%; }
-  .googly-eye-divider:before, .googly-eye-divider:after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 120px;
-    height: 2px;
-    background: #343433; }
-  .googly-eye-divider:before {
-    top: 18px;
-    left: -145px; }
-  .googly-eye-divider:after {
-    top: 18px;
-    left: 65px; }
-
-.shuffle-button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: transparent; }
-
-html, body {
-  font-family: "quicksandregular", futura, "Open Sans", sans-serif;
-  font-size: 1.3em;
-  font-weight: 400; }
-
-h1 {
-  margin-top: 0;
-  font-size: 2em;
-  font-weight: 400;
-  line-height: 1; }
-
-.nav-overlay {
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-  background: rgba(248, 215, 225, 0.9);
-  opacity: 0;
-  z-index: 9;
-  -webkit-transition: all 400ms ease;
-  -moz-transition: all 400ms ease;
-  transition: all 400ms ease; }
-
-.nav-active {
-  visibility: visible;
-  opacity: 1; }
-
-.nav-overlay_list {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate3d(0, -55%, 0);
-  -moz-transform: translate3d(0, -55%, 0);
-  -ms-transform: translate3d(0, -55%, 0);
-  -o-transform: translate3d(0, -55%, 0);
-  transform: translate3d(0, -55%, 0);
-  list-style: none; }
-  .nav-overlay_list li {
-    margin-bottom: 2em;
-    text-align: center; }
-  .nav-overlay_list a {
-    position: relative;
-    font-family: "ralewaybold", sans-serif;
-    font-size: 4em;
-    text-decoration: none;
-    color: inherit; }
-    .nav-overlay_list a::after {
-      display: block;
-      position: relative;
-      left: 50%;
-      content: "";
-      width: 100px;
-      height: 30px;
-      background: transparent;
-      border-radius: 15px;
-      -webkit-transform: translate3d(-50%, 0, 0);
-      -moz-transform: translate3d(-50%, 0, 0);
-      -ms-transform: translate3d(-50%, 0, 0);
-      -o-transform: translate3d(-50%, 0, 0);
-      transform: translate3d(-50%, 0, 0);
-      -webkit-transition: all 400ms ease;
-      -moz-transition: all 400ms ease;
-      transition: all 400ms ease; }
-    .nav-overlay_list a:hover::after {
-      background: #92c3ce;
-      -webkit-transform: translate3d(-50%, -10px, 0);
-      -moz-transform: translate3d(-50%, -10px, 0);
-      -ms-transform: translate3d(-50%, -10px, 0);
-      -o-transform: translate3d(-50%, -10px, 0);
-      transform: translate3d(-50%, -10px, 0); }
-
-.hamburger {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  cursor: pointer;
-  margin: 1em;
-  width: 3em;
-  height: 3em;
-  z-index: 10; }
-  .hamburger span, .hamburger span:before, .hamburger span:after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 3em;
-    height: 0.5em;
-    cursor: pointer;
-    border-radius: 1px;
-    background: white;
-    -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger span:before {
-    top: -1em; }
-  .hamburger span:after {
-    bottom: -1em; }
-  .hamburger.hamburger-active span {
-    background-color: transparent;
-    box-shadow: none; }
-  .hamburger.hamburger-active span:before, .hamburger.hamburger-active span:after {
-    top: 0; }
-  .hamburger.hamburger-active span:before {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  .hamburger.hamburger-active span:after {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-
-/* Project list grid variables */
-.project-list {
-  margin: 0 auto;
-  margin-bottom: -200px;
-  padding: 0;
-  max-width: 1000px;
-  list-style: none;
-  overflow-x: hidden;
-  overflow-y: hidden; }
-
-.project-list_container {
-  width: 1750px; }
-
-.project-list_item {
-  display: block;
-  position: relative;
-  float: left;
-  margin-right: 50px;
-  margin-bottom: 300px;
-  width: 300px;
-  height: 300px;
-  list-style: none; }
-  .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-    -webkit-transform: translate3d(-875px, 300px, 0);
-    -moz-transform: translate3d(-875px, 300px, 0);
-    -ms-transform: translate3d(-875px, 300px, 0);
-    -o-transform: translate3d(-875px, 300px, 0);
-    transform: translate3d(-875px, 300px, 0); }
-
-.project-list_title {
-  position: absolute;
-  opacity: 0; }
-
-.project-list_thumbnail {
-  width: 100%;
-  height: 100%; }
-
-.project-list_thumbnail-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease;
-  -moz-transition: opacity 400ms ease;
-  transition: opacity 400ms ease; }
-  .project-list_thumbnail-hover:hover {
-    opacity: 1; }
-
-.project-filter {
-  margin: 0 auto;
-  margin-bottom: 2em;
-  width: 100%;
-  height: 1em;
-  background: white;
-  text-align: center; }
-
-.project-filter_category {
-  display: inline-block;
-  padding: 0.3em 1em;
-  font-family: "ralewaybold", sans-serif;
-  border-radius: 10px;
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  transition: all 300ms ease; }
-  .project-filter_category a {
-    text-decoration: none;
-    color: inherit; }
-  .project-filter_category:hover {
-    background: #343433;
-    color: white; }
-
-.about {
-  position: relative;
-  margin-bottom: -100px;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-image: url("../img/header-main/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #58595b; }
-
-.about-center {
-  padding-top: 2em; }
-
-.about:after {
-  display: block;
-  content: ""; }
-
-.contact-icons {
-  margin: 0;
-  list-style: none;
-  text-align: center; }
-  .contact-icons:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.contact-icons_item {
-  display: inline-block;
-  width: 200px;
-  height: 200px; }
-
-.contact-icons_item-link {
-  display: block;
-  position: relative;
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-  .contact-icons_item-link[data-link='phone'] {
-    background-image: url("../img/phone-icon.svg"); }
-  .contact-icons_item-link[data-link="resume"] {
-    background-image: url("../img/resume-icon.svg"); }
-  .contact-icons_item-link[data-link="email"] {
-    background-image: url("../img/email-icon.svg"); }
-  .contact-icons_item-link:after {
-    display: block;
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url("..img/logo.png");
-    background-size: cover; }
-
-.about-copy {
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 2em;
-  text-align: center; }
-  .about-copy p {
-    margin: 0 auto;
-    max-width: 42em;
-    margin-bottom: 1em; }
-
-.about-headline {
-  margin-bottom: 0.5em; }
-
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f8d7e1; }
-
-.about:after, .footer {
-  height: 100px; }
-
-.social-icons {
-  margin: 0.3em auto;
-  height: 100%;
-  list-style: none;
-  text-align: center;
-  vertical-align: bottom; }
-
-.social-icons_item {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 10px; }
-
-.social-icons_link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: opacity 300ms ease;
-  -moz-transition: opacity 300ms ease;
-  transition: opacity 300ms ease;
-  overflow: hidden; }
-  .social-icons_link:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%; }
-  .social-icons_link[href^="http://www.facebook"] {
-    background-image: url("../img/icons/facebook.svg"); }
-  .social-icons_link[href^="http://www.twitter"] {
-    background-image: url("../img/icons/twitter.svg"); }
-  .social-icons_link[href^="http://www.linkedin"] {
-    background-image: url("../img/icons/linkedin.svg"); }
-  .social-icons_link[href^="http://www.tumblr.com"] {
-    background-image: url("../img/icons/tumblr.svg"); }
-  .social-icons_link[href^="http://www.instagram.com"] {
-    background-image: url("../img/icons/instagram.svg"); }
-  .social-icons_link:hover {
-    opacity: 0.4; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+_scss/_nav-overlay.scss:15
+_scss/main.scss:12
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:1165:in `expected'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/lexer.rb:220:in `expected!'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:579:in `assert_tok'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:408:in `funcall'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:387:in `ident'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:246:in `unary_not'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:246:in `unary_div'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:246:in `unary_minus'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:246:in `unary_plus'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `times_div_or_mod'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `plus_or_minus'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `relational'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `eq_or_neq'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `and_expr'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:227:in `or_expr'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:361:in `space'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:345:in `interpolation'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:293:in `expr'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:570:in `assert_expr'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/parser.rb:62:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:1025:in `sass_script'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:878:in `value!'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:753:in `block in try_declaration'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:1139:in `call'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:1139:in `rethrow'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:766:in `try_declaration'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:661:in `block_child'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:653:in `block_contents'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:642:in `block'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:636:in `ruleset'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:660:in `block_child'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:650:in `block_contents'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:117:in `stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/scss/parser.rb:42:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:393:in `_to_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:299:in `to_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:313:in `block in visit_import'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:88:in `block in with_import'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:396:in `run'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.4.5/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...rgba($pink, 0.9\": expected \")\", was \"`);\"\A         on line 15 of _scss/_nav-overlay.scss\A         from line 12 of _scss/main.scss\A \A 10:   left: 0;\A 11:   height: 100%;\A 12:   max-width: 100%;\A 13:   width: 100%;\A 14:   margin: 0;\A 15:   background: rgba($pink, 0.9`);\A 16:   opacity: 0;\A 17:   z-index: 9;\A 18:   @include transition(all 400ms ease);\A 19: }\A 20: "; }
