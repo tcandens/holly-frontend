@@ -18,7 +18,6 @@
     cursor: pointer;
     border-radius: 1px;
     background: white;
-    // box-shadow: 2px 2px $coralLight;
     @include transition(all 300ms $ease-out-cubic);
   }
   span:before {

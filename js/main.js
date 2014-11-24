@@ -5,7 +5,7 @@
 $('.hamburger').on('click', function() {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
-})
+});
 
 
 // Adjective Swapper
