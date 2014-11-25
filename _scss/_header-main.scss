@@ -8,7 +8,7 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    @include transform(rotate(-20deg));
+    // @include transform(rotate(-20deg));
   }
   .header_figure-right {
     width: 500px;

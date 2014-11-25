@@ -84,12 +84,7 @@ html, body {
     background-image: url("../img/header-main/chance-postit.png");
     background-size: contain;
     background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    background-repeat: no-repeat; }
   .header-main .header_figure-right {
     width: 500px;
     height: 800px;
@@ -466,5 +461,33 @@ h1 {
     background-image: url("../img/icons/instagram.svg"); }
   .social-icons_link:hover {
     opacity: 0.4; }
+
+.lazy-load {
+  opacity: 0;
+  -webkit-transition: all 2000ms ease-in-out;
+  -moz-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out; }
+
+.lazy-load__shift {
+  -webkit-transform: translate3d(0, 100px, 0);
+  -moz-transform: translate3d(0, 100px, 0);
+  -ms-transform: translate3d(0, 100px, 0);
+  -o-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0); }
+
+.lazy-load__plain {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.lazy-load__done .lazy-load {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 /*# sourceMappingURL=main.css.map */
