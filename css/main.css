@@ -421,7 +421,7 @@ h1 {
   height: 100px; }
 
 .social-icons {
-  margin: 0.3em auto;
+  margin: 0 auto;
   height: 100%;
   list-style: none;
   text-align: center;

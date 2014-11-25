@@ -14,9 +14,9 @@ $('.hamburger').on('click', function() {
 
 // Adjective Swapper
 var adjectiveList = [
-  ["Problem Solver", "a\u0020"],
-  ["Harry Potter Fan", "a\u0020"],
-  ["Graphic Designer", "a\u0020"],
+  ["Problem Solver", "a"],
+  ["Harry Potter Fan", "a"],
+  ["Graphic Designer", "a"],
   ["Asshole", "an"]
 ];
 
