@@ -1,18 +1,22 @@
-// // Nav Overlay Testing ---- DELETE WHEN DONE STYLING OVERLAY
-// var doc = $(document.body);
-// doc.addClass("TEST_nav-overlay");
+// Lazy Loading By Class
+// Collect Items with class
+$lazyLoads = $('.lazy-load');
+// Show / Fade-in elements onLoad
+$( window ).on('load', function(){
+  $('body').addClass('lazy-load__done');
+});
 
+// Hamburger Toggles Navigation
 $('.hamburger').on('click', function() {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
 });
 
-
 // Adjective Swapper
 var adjectiveList = [
-  ["Problem Solver", "a"],
-  ["Harry Potter Fan", "a"],
-  ["Graphic Designer", "a"],
+  ["Problem Solver", "a\u0020"],
+  ["Harry Potter Fan", "a\u0020"],
+  ["Graphic Designer", "a\u0020"],
   ["Asshole", "an"]
 ];
 
