@@ -29,12 +29,19 @@ module.exports = function(grunt) {
           base: 'www-root'
         }
       }
+    },
+    concat: {
+      js: {
+        src: ['js/**.js'],
+        dest: 'js/concat.js'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.registerTask('default', ['sass']);
   grunt.registerTask('serve-watch', ['connect', 'sass', 'watch'])
