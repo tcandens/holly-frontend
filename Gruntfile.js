@@ -20,6 +20,13 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      js: {
+        files: ['js/**/*.js', '!concat.js'],
+        tasks: ['concat'],
+        options: {
+         livereload: true
+        }
       }
     },
     connect: {

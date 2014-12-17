@@ -1,5 +1,5 @@
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   cursor: pointer;
@@ -41,8 +41,8 @@
   }
 }
 
-.waypoint_darken .hamburger {
+.waypoint-action_darken {
   span, span:before, span:after {
-    background: $offblack;
+    background: $grey;
   }
 }

@@ -1,4 +1,26 @@
-console.log("Imported!");
+var $hamburger = $('.hamburger');
+
+$('.waypoint_darken').waypoint(function(direction) {
+  $hamburger.toggleClass('waypoint-action_darken', direction === 'down' );
+});
+$('.waypoint_darken').waypoint(function(direction) {
+  $hamburger.toggleClass('waypoint-action_darken', direction === 'up' );
+}, {
+  offset: function() {
+    return -$(this).height;
+  }
+});
+
+// $('.waypoint_lighten').waypoint(function(direction) {
+//   $hamburger.toggleClass('waypoint-action_darken', direction === 'down' );
+// });
+// $('.waypoint_lighten').waypoint(function(direction) {
+//   $hamburger.toggleClass('waypoint-action_darken', direction === 'up' );
+// }, {
+//   offset: function() {
+//     return -$(this).height;
+//   }
+// });
 
 // Lazy Loading By Class
 // Collect Items with class
@@ -9,9 +31,10 @@ $( window ).on('load', function(){
 });
 
 // Hamburger Toggles Navigation
-$('.hamburger').on('click', function() {
+$('.hamburger').on('click', function(e) {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
+  e.preventDefault();
 });
 
 // Adjective Swapper

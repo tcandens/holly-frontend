@@ -158,7 +158,7 @@ h1 {
 .nav-overlay {
   display: block;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -220,7 +220,7 @@ h1 {
       transform: translate3d(-50%, -10px, 0); }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   cursor: pointer;
@@ -262,8 +262,8 @@ h1 {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-.waypoint_darken .hamburger span, .waypoint_darken .hamburger span:before, .waypoint_darken .hamburger span:after {
-  background: #343433; }
+.waypoint-action_darken span, .waypoint-action_darken span:before, .waypoint-action_darken span:after {
+  background: #58595b; }
 
 /* Project list grid variables */
 .project-list {

@@ -7,9 +7,10 @@ $( window ).on('load', function(){
 });
 
 // Hamburger Toggles Navigation
-$('.hamburger').on('click', function() {
+$('.hamburger').on('click', function(e) {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
+  e.preventDefault();
 });
 
 // Adjective Swapper
