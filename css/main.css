@@ -262,6 +262,9 @@ h1 {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
+.waypoint_darken .hamburger span, .waypoint_darken .hamburger span:before, .waypoint_darken .hamburger span:after {
+  background: #343433; }
+
 /* Project list grid variables */
 .project-list {
   margin: 0 auto;

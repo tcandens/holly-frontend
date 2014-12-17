@@ -40,3 +40,9 @@
     @include transform(rotate(-45deg));
   }
 }
+
+.waypoint_darken .hamburger {
+  span, span:before, span:after {
+    background: $offblack;
+  }
+}
