@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     },
     concat: {
       js: {
-        src: ['js/hamburg.js', 'js/main.js'],
+        src: ['js/main.js', 'js/hamburg.js'],
         dest: 'js/concat.js'
       }
     }

@@ -1,12 +1,5 @@
-var $hamburger = $('.hamburger');
-
-$('.waypoint_darken').waypoint(function() {
-  $hamburger.toggleClass('waypoint-action_darken');
-});
-
-$('.waypoint_darken').next().waypoint(function() {
-  $hamburger.toggleClass('waypoint-action_darken');
-})
+// Cut some mustard
+$('html').toggleClass('no-js').addClass('js-ready');
 
 // Lazy Loading By Class
 // Collect Items with class
@@ -18,10 +11,10 @@ $( window ).on('load', function(){
 
 // Hamburger Toggles Navigation
 $('.hamburger').on('click', function(e) {
+  e.preventDefault();
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
-  $(html).toggleClass('nav-active_scroll-freeze');
-  e.preventDefault();
+  // $(html).toggleClass('nav-active_scroll-freeze');
 });
 
 // Adjective Swapper
@@ -51,3 +44,17 @@ var shuffle = function() {
 };
 
 $button.on('click', shuffle);
+
+var $hamburger = $('.hamburger');
+
+$('.waypoint_darken').waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+});
+
+$('.waypoint_darken').next().waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+},{
+  offset: function() {
+    return $hamburger.height() * 1;
+  }
+})

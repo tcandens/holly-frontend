@@ -1,3 +1,6 @@
+// Cut some mustard
+$('html').toggleClass('no-js').addClass('js-ready');
+
 // Lazy Loading By Class
 // Collect Items with class
 $lazyLoads = $('.lazy-load');
@@ -8,10 +11,10 @@ $( window ).on('load', function(){
 
 // Hamburger Toggles Navigation
 $('.hamburger').on('click', function(e) {
+  e.preventDefault();
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
-  $(html).toggleClass('nav-active_scroll-freeze');
-  e.preventDefault();
+  // $(html).toggleClass('nav-active_scroll-freeze');
 });
 
 // Adjective Swapper
