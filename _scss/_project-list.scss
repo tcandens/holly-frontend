@@ -13,7 +13,6 @@ $container-width: $item-diameter * $pseudo-columns + ( $margin * $pseudo-columns
   padding: 0;
   max-width: $list-width;
   list-style: none;
-  // background: grey; // Debugger
   overflow-x: hidden;
   overflow-y: hidden;
 }

@@ -1,5 +1,5 @@
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   cursor: pointer;
@@ -38,5 +38,11 @@
   }
   &.hamburger-active span:after {
     @include transform(rotate(-45deg));
+  }
+}
+
+.waypoint-action_darken {
+  span, span:before, span:after {
+    background: $grey;
   }
 }

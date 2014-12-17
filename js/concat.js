@@ -5,7 +5,6 @@ $('html').toggleClass('no-js').addClass('js-ready');
 // Collect Items with class
 $lazyLoads = $('.lazy-load');
 // Show / Fade-in elements onLoad
-// $('body').addClass('lazy-load__done');
 $( window ).on('load', function(){
   $('body').addClass('lazy-load__done');
 });
@@ -45,3 +44,17 @@ var shuffle = function() {
 };
 
 $button.on('click', shuffle);
+
+var $hamburger = $('.hamburger');
+
+$('.waypoint_darken').waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+});
+
+$('.waypoint_darken').next().waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+},{
+  offset: function() {
+    return $hamburger.height() * 1;
+  }
+})

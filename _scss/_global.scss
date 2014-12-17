@@ -7,13 +7,18 @@ html, body {
   font-size: 100%;
 }
 
+.nav-active_scroll-freeze {
+  overflow: hidden;
+  margin-left: calc(100vw - 100%);
+}
+
 .container {
   height: 100%;
   max-width: 100%;
   @include clearfix;
 }
 
-.logo {
+.holly_logo {
   width: 140px;
   height: 140px;
   margin: 0.5em auto;
