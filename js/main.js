@@ -15,7 +15,7 @@ $('.hamburger').on('click', function(e) {
   e.preventDefault();
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
-  // $(html).toggleClass('nav-active_scroll-freeze');
+  $('html').toggleClass('nav-active_scroll-freeze');
 });
 
 // Adjective Swapper

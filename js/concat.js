@@ -5,6 +5,7 @@ $('html').toggleClass('no-js').addClass('js-ready');
 // Collect Items with class
 $lazyLoads = $('.lazy-load');
 // Show / Fade-in elements onLoad
+// $('body').addClass('lazy-load__done');
 $( window ).on('load', function(){
   $('body').addClass('lazy-load__done');
 });
@@ -14,7 +15,7 @@ $('.hamburger').on('click', function(e) {
   e.preventDefault();
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
-  // $(html).toggleClass('nav-active_scroll-freeze');
+  $('html').toggleClass('nav-active_scroll-freeze');
 });
 
 // Adjective Swapper
@@ -49,6 +50,10 @@ var $hamburger = $('.hamburger');
 
 $('.waypoint_darken').waypoint(function() {
   $hamburger.toggleClass('waypoint-action_darken');
+}, {
+  offset: function() {
+    return $hamburger.height();
+  }
 });
 
 $('.waypoint_darken').next().waypoint(function() {
