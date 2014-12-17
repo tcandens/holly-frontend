@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         }
       },
       js: {
-        files: ['js/**/*.js', '!concat.js'],
+        files: ['js/**/*.js', '!js/concat.js'],
         tasks: ['concat'],
         options: {
          livereload: true

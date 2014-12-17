@@ -7,6 +7,11 @@ html, body {
   font-size: 100%;
 }
 
+.nav-active_scroll-freeze {
+  overflow: hidden;
+  margin-left: calc(100vw - 100%);
+}
+
 .container {
   height: 100%;
   max-width: 100%;

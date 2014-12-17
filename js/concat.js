@@ -1,26 +1,12 @@
 var $hamburger = $('.hamburger');
 
-$('.waypoint_darken').waypoint(function(direction) {
-  $hamburger.toggleClass('waypoint-action_darken', direction === 'down' );
-});
-$('.waypoint_darken').waypoint(function(direction) {
-  $hamburger.toggleClass('waypoint-action_darken', direction === 'up' );
-}, {
-  offset: function() {
-    return -$(this).height;
-  }
+$('.waypoint_darken').waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
 });
 
-// $('.waypoint_lighten').waypoint(function(direction) {
-//   $hamburger.toggleClass('waypoint-action_darken', direction === 'down' );
-// });
-// $('.waypoint_lighten').waypoint(function(direction) {
-//   $hamburger.toggleClass('waypoint-action_darken', direction === 'up' );
-// }, {
-//   offset: function() {
-//     return -$(this).height;
-//   }
-// });
+$('.waypoint_darken').next().waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+})
 
 // Lazy Loading By Class
 // Collect Items with class
@@ -34,6 +20,7 @@ $( window ).on('load', function(){
 $('.hamburger').on('click', function(e) {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
+  $(html).toggleClass('nav-active_scroll-freeze');
   e.preventDefault();
 });
 

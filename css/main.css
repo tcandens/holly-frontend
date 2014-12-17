@@ -12,6 +12,10 @@ html, body {
   color: #343433;
   font-size: 100%; }
 
+.nav-active_scroll-freeze {
+  overflow: hidden;
+  margin-left: calc(100vw - 100%); }
+
 .container {
   height: 100%;
   max-width: 100%; }
@@ -60,7 +64,6 @@ html, body {
   position: relative;
   height: 100%;
   width: 100%;
-  margin-bottom: 1em;
   overflow: hidden; }
 
 .header_figure-left, .header_figure-right {
@@ -73,6 +76,19 @@ html, body {
 .header_figure-right {
   right: 0;
   top: 0; }
+
+main.projects:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px; }
+main.projects:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px; }
 
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
@@ -321,8 +337,7 @@ h1 {
     opacity: 1; }
 
 .project-filter {
-  margin: 0 auto;
-  margin-bottom: 2em;
+  margin: 1em auto 2em auto;
   width: 100%;
   height: 1em;
   background: white;

@@ -10,6 +10,7 @@ $( window ).on('load', function(){
 $('.hamburger').on('click', function(e) {
   $(this).toggleClass('hamburger-active');
   $('.nav-overlay').toggleClass('nav-active');
+  $(html).toggleClass('nav-active_scroll-freeze');
   e.preventDefault();
 });
 
