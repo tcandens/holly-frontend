@@ -211,12 +211,13 @@ h1 {
   transform: translate3d(0, -55%, 0);
   list-style: none; }
   .nav-overlay_list li {
-    margin-bottom: 0em;
+    margin-bottom: 1.2em;
     text-align: center; }
   .nav-overlay_list a {
     position: relative;
     font-family: "ralewaybold", sans-serif;
     font-size: 4em;
+    line-height: 0;
     text-decoration: none;
     color: inherit; }
     .nav-overlay_list a::after {

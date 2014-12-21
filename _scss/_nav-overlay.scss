@@ -26,7 +26,7 @@
   @include transform(translate3d(0,-55%,0));
   list-style: none;
   li {
-    margin-bottom: 0em;
+    margin-bottom: 1.2em;
     text-align: center;
     // max-width: 27em;
   }
@@ -34,6 +34,7 @@
     position: relative;
     font-family: $futura;
     font-size: 4em;
+    line-height: 0;
     text-decoration: none;
     color: inherit;
     &::after {
