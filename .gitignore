@@ -1,6 +1,6 @@
 .sass-cache
-node_modules/
 bower_components/
-!bower_components/jquery/dist/jquery.min.js
-!bower_components/jquery-waypoints/waypoints.min.js
+node_modules/
+!node_modules/jquery/dist/jquery.min.js
+!node_modules/jquery-waypoints/waypoints.min.js
 **/*.map
