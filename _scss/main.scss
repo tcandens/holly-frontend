@@ -1,7 +1,8 @@
 @import '../bower_components/bourbon/dist/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
-@import 'vars';
+@import 'vars',
+        'mixins';
 @import 'global';
 @import 'fonts';
 @import 'header';

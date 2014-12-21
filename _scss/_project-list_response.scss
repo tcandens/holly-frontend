@@ -6,32 +6,29 @@ $margin: 50px; // margin-right value for all list items
 $margin-total: ($columns - 1) * $margin; // Total of margins within the list viewport
 $item-diameter: ( $list-width - $margin-total ) / $columns; // Size of list items as calculated with widths of list margin and number of columns
 $container-width: $item-diameter * $pseudo-columns + ( $margin * $pseudo-columns ); // The width of overflow container within list viewport
-  // 
-  // .project-list {
-  //   @include break(mobileplus) {
-  //     margin-bottom: -$item-diameter + 100px;
-  //     max-width: $list-width;
-  //   }
-  // }
-  // .project-list_container {
-  //   @include break(mobileplus) {
-  //     width: $container-width;
-  //   }
-  // }
-  // .project-list_item {
-  //   @include break(mobileplus) {
-  //     float: left;
-  //     margin-right: $margin;
-  //     margin-bottom: $item-diameter * 1;
-  //     width: $item-diameter;
-  //     height: $item-diameter;
-  //     // border: 1px solid chocolate; // Debugger
-  //     // GRID SETUP WITH NTH-CHILD
-  //     &:nth-child(5n+4), &:nth-child(5n+5) { // Shifting the last list items in row down and left to make pseudo row
-  //       $shift-x: -($columns * $margin) - (($columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
-  //       $shift-y: $item-diameter * 1;
-  //       @include transform(translate3d($shift-x, $shift-y, 0));
-  //     }
-  //   }
-  //
-  // }
+
+@include bp(desktop) {
+
+  .project-list {
+    margin-bottom: -$item-diameter + 100px;
+    max-width: $list-width;
+  }
+  .project-list_container { // Container within the project-list 'viewport' that allows rows to overflow, be hidden, and then split
+    width: $container-width;
+  }
+  .project-list_item {
+    float: left;
+    margin-right: $margin;
+    margin-bottom: $item-diameter * 1;
+    width: $item-diameter;
+    height: $item-diameter;
+    // border: 1px solid chocolate; // Debugger
+    // GRID SETUP WITH NTH-CHILD
+    &:nth-child(5n+4), &:nth-child(5n+5) { // Shifting the last list items in row down and left to make pseudo row
+      $shift-x: -($columns * $margin) - (($columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
+      $shift-y: $item-diameter * 1;
+      @include transform(translate3d($shift-x, $shift-y, 0));
+    }
+  }
+
+}
