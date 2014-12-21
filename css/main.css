@@ -162,8 +162,8 @@ main.projects:after {
 
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
-  font-size: 1.3em;
-  font-weight: 400; }
+  font-size: 1.1em;
+  font-weight: 700; }
 
 h1 {
   margin-top: 0;
@@ -331,24 +331,25 @@ h1 {
 /* Project list grid variables */
 @media (min-width: 70em) {
   .project-list {
-    margin-bottom: -200px;
+    margin-bottom: -206.66667px;
     max-width: 1000px; }
 
   .project-list_container {
-    width: 1750px; }
+    width: 1733.33333px; }
 
   .project-list_item {
     float: left;
-    margin-right: 50px;
-    margin-bottom: 300px;
-    width: 300px;
-    height: 300px; }
-    .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-      -webkit-transform: translate3d(-875px, 300px, 0);
-      -moz-transform: translate3d(-875px, 300px, 0);
-      -ms-transform: translate3d(-875px, 300px, 0);
-      -o-transform: translate3d(-875px, 300px, 0);
-      transform: translate3d(-875px, 300px, 0); } }
+    margin-right: 40px;
+    margin-bottom: 306.66667px;
+    width: 306.66667px;
+    height: 306.66667px;
+    content: "5n-4"; }
+    .project-list_item:nth-child(5n-4), .project-list_item:nth-child(5n-5) {
+      -webkit-transform: translate3d(-866.66667px, 306.66667px, 0);
+      -moz-transform: translate3d(-866.66667px, 306.66667px, 0);
+      -ms-transform: translate3d(-866.66667px, 306.66667px, 0);
+      -o-transform: translate3d(-866.66667px, 306.66667px, 0);
+      transform: translate3d(-866.66667px, 306.66667px, 0); } }
 .project-filter {
   margin: 1em auto 2em auto;
   width: 100%;
