@@ -12,15 +12,15 @@
     @media (min-width: 50em) { @content ; }
   }
   @else if $point == phablet {
-    @media (min-width: 37.5em) and (max-width: 50em)  { @content ; }
+    @media (min-width: 35em) and (max-width: 50em)  { @content ; }
   }
   @else if $point == phabletplus {
-    @media (min-width: 37.5em) { @content ; }
+    @media (min-width: 35em) { @content ; }
   }
   @else if $point == mobileonly {
-    @media (max-width: 37.5em)  { @content ; }
+    @media (max-width: 35em)  { @content ; }
   }
   @else if $point == mobileplus {
-    @media (min-width: 37.5em) { @content ; }
+    @media (min-width: 35em) { @content ; }
   }
 }
