@@ -40,41 +40,42 @@
     margin-bottom: $item-diameter * 1;
     width: $item-diameter;
     height: $item-diameter;
-    $pseudo-columns-penult: $pseudo-columns - 1;
-    $nth: '#{$pseudo-columns}n-#{$pseudo-columns}';
-    $nth-penult: '#{$pseudo-columns}n-#{$pseudo-columns-penult}';
-    content: $nth-penult;
-    &:nth-child(#{$nth-penult}), &:nth-child(#{$nth}) {
-      $shift-x: -($columns * $margin) - ( ( $columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
-      $shift-y: $item-diameter * 1;
-      @include transform(translate3d($shift-x, $shift-y, 0 ));
+
+    @if ( $columns == 3 ) {
+
+      $nth: '#{$pseudo-columns}n+#{$pseudo-columns}';
+      $pseudo-columns-penult: $pseudo-columns - 1;
+      $nth-penult: '#{$pseudo-columns}n+#{$pseudo-columns-penult}';
+      &:nth-child(#{$nth-penult}), &:nth-child(#{$nth}) {
+        $shift-x: -($columns * $margin) - ( ( $columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
+        $shift-y: $item-diameter * 1;
+        @include transform(translate3d($shift-x, $shift-y, 0 ));
+      }
+
+    } @elseif ( $columns == 2 ) {
+
+      $nth: '#{$pseudo-columns}n+#{$pseudo-columns}';
+      &:nth-child(#{$nth}) {
+        $shift-x: -($columns * $margin) - ( ( $columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
+        $shift-y: $item-diameter * 1;
+        @include transform(translate3d($shift-x, $shift-y, 0 ));
+      }
+
+    } @else {
+      content: 'hmmm';
     }
+
   }
 }
 
+@include bp(tablet) {
+
+  @include project-list-layout(700px, 2, 20px);
+
+}
 
 @include bp(desktop) {
 
-  @include project-list-layout(1000px, 3, 40px);
-
-  // .project-list {
-  //   margin-bottom: -$item-diameter + 100px;
-  //   max-width: $list-width;
-  // }
-  // .project-list_container { // Container within the project-list 'viewport' that allows rows to overflow, be hidden, and then split
-  //   width: $container-width;
-  // }
-  // .project-list_item {
-  //   float: left;
-  //   margin-right: $margin;
-  //   margin-bottom: $item-diameter * 1;
-  //   width: $item-diameter;
-  //   height: $item-diameter;
-  //   &:nth-child(5n+4), &:nth-child(5n+5) { // Shifting the last list items in row down and left to make pseudo row
-  //     $shift-x: -($columns * $margin) - (($columns - 1) * $item-diameter) - ( $item-diameter / 2 ) + ( $margin / 2);
-  //     $shift-y: $item-diameter * 1;
-  //     @include transform(translate3d($shift-x, $shift-y, 0));
-  //   }
-  // }
+  @include project-list-layout(1000px, 3, 20px);
 
 }
