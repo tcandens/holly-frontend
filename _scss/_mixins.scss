@@ -1,0 +1,11 @@
+$small-break: 600px;
+$large-break: 1024px;
+
+@mixin break($point) {
+  @if $point == desktop {
+    @media (min-width: $large-break) { @content; }
+  }
+  @else if $point == mobileplus {
+    @media (min-width: $small-break)  { @content; }
+  }
+}
