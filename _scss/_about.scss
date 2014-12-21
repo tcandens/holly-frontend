@@ -34,8 +34,9 @@ $footer-height: 100px;
 .contact-icons_item {
   display: inline-block;
   position: relative;
-  width: 200px;
-  height: 200px;
+  $dimension: 100px;
+  width: $dimension;
+  height: $dimension;
   &:after {
     content: "";
     display: block;
@@ -54,6 +55,11 @@ $footer-height: 100px;
     &:after {
       opacity: 1;
     }
+  }
+  @include bp(phabletplus) {
+    $dimension: 180px;
+    width: $dimension;
+    height: $dimension;
   }
 }
 
@@ -85,11 +91,15 @@ $footer-height: 100px;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 2em;
+  padding: 2em;
   text-align: center;
   p {
     margin: 0 auto;
     max-width: 42em;
     margin-bottom: 1em;
+  }
+  @include bp(tabletplus) {
+    padding: 0;
   }
 }
 .about-headline {
@@ -110,7 +120,6 @@ $footer-height: 100px;
 
 .social-icons {
   margin: 0 auto;
-  // width: 800px;
   height: 100%;
   list-style:  none;
   text-align: center;
@@ -118,10 +127,21 @@ $footer-height: 100px;
 }
 .social-icons_item {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  $dimension: 60px;
+  width: $dimension;
+  height: $dimension;
   padding: 10px;
   // float: left;
+  @include bp(phablet) {
+    $dimension: 80px;
+    width: $dimension;
+    height: $dimension;
+  }
+  @include bp(tabletplus) {
+    $dimension: 100px;
+    width: $dimension;
+    height: $dimension;
+  }
 }
 .social-icons_link {
   display: block;
