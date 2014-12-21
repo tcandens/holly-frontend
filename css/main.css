@@ -9,7 +9,8 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  color: #343433; }
+  color: #343433;
+  font-size: 100%; }
 
 .nav-active_scroll-freeze {
   overflow: hidden;
@@ -161,7 +162,7 @@ main.projects:after {
 
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 400; }
 
 h1 {
@@ -283,46 +284,34 @@ h1 {
 /* Project list grid variables */
 .project-list {
   margin: 0 auto;
-  width: 100%;
+  margin-bottom: -200px;
   padding: 0;
+  max-width: 1000px;
   list-style: none;
   overflow-x: hidden;
   overflow-y: hidden; }
-  @media (min-width: 600px) {
-    .project-list {
-      max-width: 1000px;
-      margin-bottom: -200px; } }
 
 .project-list_container {
-  width: 100%; }
-  @media (min-width: 600px) {
-    .project-list_container {
-      width: 1750px; } }
+  width: 1750px; }
 
 .project-list_item {
   display: block;
   position: relative;
-  margin: 0 auto;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 300px;
   width: 300px;
   height: 300px;
   list-style: none; }
+  .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
+    -webkit-transform: translate3d(-875px, 300px, 0);
+    -moz-transform: translate3d(-875px, 300px, 0);
+    -ms-transform: translate3d(-875px, 300px, 0);
+    -o-transform: translate3d(-875px, 300px, 0);
+    transform: translate3d(-875px, 300px, 0); }
   .project-list_item img {
     width: 100%;
     height: 100%; }
-  @media (min-width: 600px) {
-    .project-list_item {
-      float: left;
-      margin-right: 50px;
-      margin-bottom: 300px;
-      width: 300px;
-      height: 300px; }
-      GRID SETUP WITH NTH-CHILD
-      .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-        -webkit-transform: translate3d(-875px, 300px, 0);
-        -moz-transform: translate3d(-875px, 300px, 0);
-        -ms-transform: translate3d(-875px, 300px, 0);
-        -o-transform: translate3d(-875px, 300px, 0);
-        transform: translate3d(-875px, 300px, 0); } }
 
 .project-list_title {
   position: absolute;
