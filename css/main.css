@@ -12,6 +12,9 @@ html, body {
   color: #343433;
   font-size: 100%; }
 
+ul {
+  padding: 0; }
+
 .nav-active_scroll-freeze {
   overflow: hidden;
   margin-left: calc(100vw - 100%); }
@@ -162,8 +165,14 @@ main.projects:after {
 
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
-  font-size: 1.3em;
-  font-weight: 400; }
+  font-size: 1.1em;
+  font-weight: 700; }
+  @media (min-width: 50em) and (max-width: 70em) {
+    html, body {
+      font-size: 1.2em; } }
+  @media (min-width: 70em) {
+    html, body {
+      font-size: 1.3em; } }
 
 h1 {
   margin-top: 0;
@@ -281,34 +290,27 @@ h1 {
 .waypoint-action_darken span, .waypoint-action_darken span:before, .waypoint-action_darken span:after {
   background: #58595b; }
 
-/* Project list grid variables */
 .project-list {
   margin: 0 auto;
-  margin-bottom: -200px;
   padding: 0;
-  max-width: 1000px;
   list-style: none;
   overflow-x: hidden;
   overflow-y: hidden; }
 
 .project-list_container {
-  width: 1750px; }
+  padding: 1em;
+  width: 100%; }
+  @media (min-width: 37.5em) {
+    .project-list_container {
+      padding: 0; } }
 
 .project-list_item {
   display: block;
   position: relative;
-  float: left;
-  margin-right: 50px;
-  margin-bottom: 300px;
-  width: 300px;
-  height: 300px;
+  margin-bottom: 1em;
+  width: 100%;
+  height: auto;
   list-style: none; }
-  .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
-    -webkit-transform: translate3d(-875px, 300px, 0);
-    -moz-transform: translate3d(-875px, 300px, 0);
-    -ms-transform: translate3d(-875px, 300px, 0);
-    -o-transform: translate3d(-875px, 300px, 0);
-    transform: translate3d(-875px, 300px, 0); }
   .project-list_item img {
     width: 100%;
     height: 100%; }
@@ -336,12 +338,77 @@ h1 {
   .project-list_thumbnail-hover:hover {
     opacity: 1; }
 
+/* Project list grid variables */
+@media (min-width: 50em) and (max-width: 70em) {
+  .project-list {
+    margin-bottom: -240px;
+    max-width: 700px; }
+
+  .project-list_container {
+    width: 1080px; }
+
+  .project-list_item {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 340px;
+    width: 340px;
+    height: 340px; }
+    .project-list_item:nth-child(3n+3) {
+      -webkit-transform: translate3d(-540px, 340px, 0);
+      -moz-transform: translate3d(-540px, 340px, 0);
+      -ms-transform: translate3d(-540px, 340px, 0);
+      -o-transform: translate3d(-540px, 340px, 0);
+      transform: translate3d(-540px, 340px, 0); } }
+@media (min-width: 37.5em) and (max-width: 50em) {
+  .project-list {
+    margin-bottom: -145px;
+    max-width: 500px; }
+
+  .project-list_container {
+    width: 765px; }
+
+  .project-list_item {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 245px;
+    width: 245px;
+    height: 245px; }
+    .project-list_item:nth-child(3n+3) {
+      -webkit-transform: translate3d(-382.5px, 245px, 0);
+      -moz-transform: translate3d(-382.5px, 245px, 0);
+      -ms-transform: translate3d(-382.5px, 245px, 0);
+      -o-transform: translate3d(-382.5px, 245px, 0);
+      transform: translate3d(-382.5px, 245px, 0); } }
+@media (min-width: 70em) {
+  .project-list {
+    margin-bottom: -220px;
+    max-width: 1000px; }
+
+  .project-list_container {
+    width: 1700px; }
+
+  .project-list_item {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 320px;
+    width: 320px;
+    height: 320px; }
+    .project-list_item:nth-child(5n+4), .project-list_item:nth-child(5n+5) {
+      -webkit-transform: translate3d(-850px, 320px, 0);
+      -moz-transform: translate3d(-850px, 320px, 0);
+      -ms-transform: translate3d(-850px, 320px, 0);
+      -o-transform: translate3d(-850px, 320px, 0);
+      transform: translate3d(-850px, 320px, 0); } }
 .project-filter {
   margin: 1em auto 2em auto;
+  padding: 0;
   width: 100%;
-  height: 1em;
   background: white;
   text-align: center; }
+  @media (max-width: 37.5em) {
+    .project-filter {
+      margin-bottom: 0;
+      padding: 0 3em; } }
 
 .project-filter_category {
   display: inline-block;
@@ -357,10 +424,13 @@ h1 {
   .project-filter_category:hover {
     background: #343433;
     color: white; }
+  @media (max-width: 37.5em) {
+    .project-filter_category {
+      display: block; } }
 
 .about {
   position: relative;
-  margin-bottom: -100px;
+  margin-bottom: -120px;
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -388,8 +458,8 @@ h1 {
 .contact-icons_item {
   display: inline-block;
   position: relative;
-  width: 200px;
-  height: 200px; }
+  width: 100px;
+  height: 100px; }
   .contact-icons_item:after {
     content: "";
     display: block;
@@ -407,6 +477,10 @@ h1 {
     transition: all 300ms ease; }
   .contact-icons_item:hover:after {
     opacity: 1; }
+  @media (min-width: 37.5em) {
+    .contact-icons_item {
+      width: 180px;
+      height: 180px; } }
 
 .contact-icons_item-link {
   display: block;
@@ -432,11 +506,15 @@ h1 {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 2em;
+  padding: 2em;
   text-align: center; }
   .about-copy p {
     margin: 0 auto;
     max-width: 42em;
     margin-bottom: 1em; }
+  @media (min-width: 50em) {
+    .about-copy {
+      padding: 0; } }
 
 .about-headline {
   margin-bottom: 0.5em; }
@@ -446,28 +524,38 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #f8d7e1; }
+  background: #f8d7e1;
+  overflow-y: scroll; }
 
 .about:after, .footer {
-  height: 100px; }
+  height: 120px; }
 
 .social-icons {
+  display: table;
   margin: 0 auto;
+  width: 100%;
   height: 100%;
   list-style: none;
-  text-align: center;
-  vertical-align: bottom; }
+  text-align: center; }
 
 .social-icons_item {
-  display: inline-block;
+  display: table-cell;
+  padding: 10px;
   width: 100px;
-  height: 100px;
-  padding: 10px; }
+  height: 100px; }
+  @media (min-width: 37.5em) and (max-width: 50em) {
+    .social-icons_item {
+      width: 80px;
+      height: 80px; } }
+  @media (min-width: 50em) {
+    .social-icons_item {
+      width: 100px;
+      height: 100px; } }
 
 .social-icons_link {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

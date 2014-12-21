@@ -1,7 +1,8 @@
 @import '../bower_components/bourbon/dist/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
-@import 'vars';
+@import 'vars',
+        'mixins';
 @import 'global';
 @import 'fonts';
 @import 'header';
@@ -11,7 +12,8 @@
 @import 'typography';
 @import 'nav-overlay';
 @import 'hamburger';
-@import 'project-list';
+@import 'project-list',
+        'project-list_response';
 @import 'project-filter';
 @import 'about';
 @import 'lazy-load';
