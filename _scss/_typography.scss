@@ -2,6 +2,12 @@ html, body {
   font-family: $quicksand;
   font-size: 1.1em;
   font-weight: 700;
+  @include bp(tablet) {
+    font-size: 1.2em;
+  }
+  @include bp(desktop) {
+    font-size: 1.3em;
+  }
 }
 h1 {
   margin-top: 0;

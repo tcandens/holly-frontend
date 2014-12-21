@@ -7,6 +7,7 @@
   background: white;
   text-align: center;
   @include bp(mobileonly) {
+    margin-bottom: 0;
     padding: 0 3em;
   }
 }
