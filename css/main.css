@@ -211,7 +211,7 @@ h1 {
   transform: translate3d(0, -55%, 0);
   list-style: none; }
   .nav-overlay_list li {
-    margin-bottom: 2em;
+    margin-bottom: 0em;
     text-align: center; }
   .nav-overlay_list a {
     position: relative;
