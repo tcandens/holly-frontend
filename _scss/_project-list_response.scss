@@ -70,18 +70,18 @@
 
 @include bp(tablet) {
 
-  @include project-list-layout(700px, 2, 20px);
+  @include project-list-layout(700px, 2, 30px);
 
 }
 
 @include bp(phablet) {
 
-  @include project-list-layout(500px, 2, 10px);
-  
+  @include project-list-layout(500px, 2, 30px);
+
 }
 
 @include bp(desktop) {
 
-  @include project-list-layout(1000px, 3, 20px);
+  @include project-list-layout(1000px, 3, 40px);
 
 }

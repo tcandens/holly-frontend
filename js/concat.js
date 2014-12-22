@@ -25,23 +25,37 @@ var adjectiveList = [
   ["Graphic Designer", "a"],
   ["Asshole", "an"]
 ];
+var shuffleCounter = 0;
 
-var $shuffleScope = $('.shuffle-scope');
-var $button = $shuffleScope.find('.shuffle-button');
-var $adjective = $shuffleScope.find('.adjective');
-var $article = $shuffleScope.find('.article');
+var $shuffleScope = $('.shuffle-scope'),
+    $button = $shuffleScope.find('.shuffle-button'),
+    $adjective = $shuffleScope.find('.adjective'),
+    $article = $shuffleScope.find('.article-an');
 
 var shuffle = function() {
   $button.attr("src", "img/googly-eye.gif");
-  var index = adjectiveList.length;
-  var rand = Math.floor(Math.random() * index );
-  console.log(rand);
+  var rand = Math.floor(Math.random() * adjectiveList.length );
 
+  while ( rand == shuffleCounter ) {
+    rand = Math.floor(Math.random() * adjectiveList.length );
+    console.log('rand redo');
+  }
+
+  console.log('old: ' + shuffleCounter);
+  console.log('new: ' + rand);
   var newAdj = adjectiveList[rand][0];
-  var newArt = adjectiveList[rand][1];
+
+  if ( adjectiveList[rand][1] == "an" ) {
+    $article.addClass('article-an_on');
+  } else if ( adjectiveList[rand][1] == "a" ) {
+    $article.removeClass('article-an_on');
+  } else {
+    console.log('Shit');
+  }
 
   $adjective.text(newAdj);
-  $article.text(newArt);
+  shuffleCounter = rand;
+
 };
 
 $button.on('click', shuffle);

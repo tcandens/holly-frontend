@@ -2,8 +2,10 @@
   background-image: url('../img/header-main/bg.jpg');
   background-size: cover;
   .header_figure-left {
-    width: 300px;
-    height: 400px;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: auto;
     background-image: url('../img/header-main/chance-postit.png');
     background-size: contain;
     background-position: center center;
@@ -11,8 +13,10 @@
     // @include transform(rotate(-20deg));
   }
   .header_figure-right {
-    width: 500px;
-    height: 800px;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: auto;
     margin-right: -100px;
     background-image: url('../img/header-main/notebook.png');
     background-size: contain;
@@ -22,50 +26,81 @@
 }
 .header-main_title {
   position: relative;
-  // top: 50%;
-  margin: 1em auto;
-  max-width: 80%;
+  top: 50%;
+  margin: 0em auto;
+  // max-width: 90%;
+  max-height: 100%;
   text-align: center;
-  // @include transform(translate3d(0,-50%,0));
+  @include transform(translate3d(0,-50%,0));
 }
 .salutation, .intro, .adjective {
   margin: 0;
 }
+
 .intro {
   display: inline-block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   max-width: 14em;
 }
+.adjective-container {
+  display: table;
+  position: relative;
+  height: 5em;
+  width: 100%;
+}
 .adjective {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  width: 100%;
+  min-height: 2.5em;
   font-family: $futura;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 2em;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
+}
+.article {
+  position: relative;
+}
+.article-an {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  line-height: 1.2;
+  opacity: 0;
+  @include transition(opacity 200ms ease);
+}
+.article-an_on {
+  opacity: 1;
 }
 
 .googly-eye-divider {
   position: relative;
-  width: 40px;
-  height: 40px;
-  margin: 50px auto;
+  bottom: 0em;
+  $eye-width: 40px;
+  width: $eye-width;
+  height: $eye-width;
+  margin: 0.2em auto 0 auto;
   // background-color: white;
   border-radius: 50%;
+  $divider-width: 100px;
   &:before, &:after {
     display: block;
     position: absolute;
     content: "";
-    width: 120px;
+    width: $divider-width;
     height: 2px;
     background: $offblack;
   }
   &:before {
     top: 18px;
-    left: -145px;
+    left: -$divider-width - 20px;
   }
   &:after {
     top: 18px;
-    left: 65px;
+    left: $eye-width + 20px;
   }
   img {
     margin: 0;

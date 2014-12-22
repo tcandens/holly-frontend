@@ -107,13 +107,13 @@ $footer-height: 120px;
 }
 .footer {
   position: relative;
-  // margin-top: 1em;
   bottom: 0;
   left: 0;
   width: 100%;
   // height: $footer-height;
   background: $pink;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
 
 }
 .about:after, .footer {
@@ -148,7 +148,7 @@ $footer-height: 120px;
 }
 .social-icons_link {
   display: block;
-  $dimension: 100px;
+  $dimension: 70px;
   width: $dimension;
   height: $dimension;
   background-size: cover;
