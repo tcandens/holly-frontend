@@ -198,9 +198,9 @@ ul {
   -ms-transform: translate3d(0, -50%, 0);
   -o-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
-  -webkit-transition: all 100ms ease;
-  -moz-transition: all 100ms ease;
-  transition: all 100ms ease; }
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  transition: all 200ms ease; }
 
 .article-an_on {
   opacity: 1;

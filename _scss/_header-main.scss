@@ -107,7 +107,7 @@
   line-height: 1.2;
   opacity: 0;
   @include transform(translate3d(0,-50%,0));
-  @include transition(all 100ms ease);
+  @include transition(all 200ms ease);
 }
 .article-an_on {
   opacity: 1;
