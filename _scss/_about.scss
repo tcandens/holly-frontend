@@ -112,9 +112,10 @@ $footer-height: 120px;
   width: 100%;
   // height: $footer-height;
   background: $pink;
-  overflow-y: hidden;
-  overflow-x: scroll;
-
+  @include bp(mobileonly) {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
 }
 .about:after, .footer {
   height: $footer-height;
@@ -127,6 +128,9 @@ $footer-height: 120px;
   height: 100%;
   list-style:  none;
   text-align: center;
+  @include bp(phabletplus) {
+    display: block;
+  }
 }
 .social-icons_item {
   display: table-cell;
@@ -139,6 +143,9 @@ $footer-height: 120px;
     $dimension: 80px;
     width: $dimension;
     height: $dimension;
+  }
+  @include bp(phabletplus) {
+    display: inline-block;
   }
   @include bp(tabletplus) {
     $dimension: 100px;

@@ -544,9 +544,11 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #f8d7e1;
-  overflow-y: hidden;
-  overflow-x: scroll; }
+  background: #f8d7e1; }
+  @media (max-width: 35em) {
+    .footer {
+      overflow-y: hidden;
+      overflow-x: scroll; } }
 
 .about:after, .footer {
   height: 120px; }
@@ -558,6 +560,9 @@ h1 {
   height: 100%;
   list-style: none;
   text-align: center; }
+  @media (min-width: 35em) {
+    .social-icons {
+      display: block; } }
 
 .social-icons_item {
   display: table-cell;
@@ -568,6 +573,9 @@ h1 {
     .social-icons_item {
       width: 80px;
       height: 80px; } }
+  @media (min-width: 35em) {
+    .social-icons_item {
+      display: inline-block; } }
   @media (min-width: 50em) {
     .social-icons_item {
       width: 100px;
