@@ -35,6 +35,13 @@ var $shuffleScope = $('.shuffle-scope'),
 
 var shuffle = function() {
   $button.attr("src", "img/googly-eye.gif");
+  if ( $articleAn.hasClass('article-an_on') ) {
+    $articleAn.removeClass('article-an_on').addClass('article-an_shiftdown');
+    var timeout05 = setTimeout(function() {
+      $articleAn.removeClass('article-an_shiftdown');
+    }, 200);
+  };
+
   var rand = Math.floor(Math.random() * adjectiveList.length );
 
   while ( rand == shuffleCounter ) {
@@ -53,6 +60,7 @@ var shuffle = function() {
   } else {
     console.log('Shit');
   }
+
 
   $adjective.addClass('adjective_fade');
   $article.addClass('article_fade');
