@@ -84,9 +84,30 @@
   font-size: 2em;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
+  opacity: 1;
+  @include transform(translate3d(0,0,0));
+  @include transition(all 200ms ease); // Delay referenced in main.js with class changes inside setTimeout()
+}
+.adjective_fade {
+  opacity: 0;
+  @include transform(translate3d(0,50%,0));
+}
+.adjective_shiftup {
+  opacity: 0;
+  @include transform(translate3d(0,-50%,0));
 }
 .article {
   position: relative;
+  opacity: 1;
+  @include transition(all 200ms ease);
+}
+.article_fade {
+  opacity: 0;
+  @include transform(translate3d(0,-100%,0));
+}
+.article_shiftup {
+  opacity: 0;
+  @include transform(translate3d(0,100%,0));
 }
 .article-an {
   position: absolute;
@@ -95,7 +116,7 @@
   height: 100%;
   line-height: 1.2;
   opacity: 0;
-  @include transition(opacity 200ms ease);
+  // @include transition(opacity 200ms ease);
 }
 .article-an_on {
   opacity: 1;

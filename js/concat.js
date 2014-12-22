@@ -30,7 +30,8 @@ var shuffleCounter = 0;
 var $shuffleScope = $('.shuffle-scope'),
     $button = $shuffleScope.find('.shuffle-button'),
     $adjective = $shuffleScope.find('.adjective'),
-    $article = $shuffleScope.find('.article-an');
+    $article = $shuffleScope.find('.article');
+    $articleAn = $shuffleScope.find('.article-an');
 
 var shuffle = function() {
   $button.attr("src", "img/googly-eye.gif");
@@ -38,22 +39,38 @@ var shuffle = function() {
 
   while ( rand == shuffleCounter ) {
     rand = Math.floor(Math.random() * adjectiveList.length );
-    console.log('rand redo');
   }
-
-  console.log('old: ' + shuffleCounter);
-  console.log('new: ' + rand);
   var newAdj = adjectiveList[rand][0];
 
   if ( adjectiveList[rand][1] == "an" ) {
-    $article.addClass('article-an_on');
+    var timeout03 = setTimeout(function() {
+      $articleAn.addClass('article-an_on');
+    }, 200);
   } else if ( adjectiveList[rand][1] == "a" ) {
-    $article.removeClass('article-an_on');
+    var timeout03 = setTimeout(function() {
+      $articleAn.removeClass('article-an_on');
+    }, 200);
   } else {
     console.log('Shit');
   }
 
-  $adjective.text(newAdj);
+  $adjective.addClass('adjective_fade');
+  $article.addClass('article_fade');
+  var timeout01 = setTimeout(function() {
+    // Change Adjective
+    $adjective.html( newAdj );
+    // Switch position of adjective for illusion
+    $adjective.removeClass('adjective_fade');
+    $adjective.addClass('adjective_shiftup');
+    // Article fade
+    $article.removeClass('article_fade');
+    $article.addClass('article_shiftup');
+  }, 200);
+  var timeout02 = setTimeout(function() {
+    // Kill transforms for appearence of shifting back in from top
+    $adjective.removeClass('adjective_shiftup');
+    $article.removeClass('article_shiftup');
+  }, 400);
   shuffleCounter = rand;
 
 };
