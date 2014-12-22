@@ -23,4 +23,7 @@
   @else if $point == mobileplus {
     @media (min-width: 35em) { @content ; }
   }
+  @else if $point == landscape {
+    @media (max-width: 50em) and (orientation: landscape) { @content ; }
+  }
 }

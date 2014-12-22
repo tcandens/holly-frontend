@@ -58,8 +58,22 @@
   text-align: center;
   @include transform(translate3d(0,-50%,0));
 }
+.holly_logo {
+  @include bp(landscape) {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+  }
+}
 .salutation, .intro, .adjective {
   margin: 0;
+}
+.salutation, .shuffle-scope {
+  @include bp(landscape) {
+    margin-left: 120px;
+  }
 }
 
 .intro {
