@@ -42,6 +42,12 @@ module.exports = function(grunt) {
         src: ['js/main.js', 'js/hamburg.js'],
         dest: 'js/concat.js'
       }
+    },
+    copy: {
+      apache: {
+        src: 'bower_components/apache-server-configs/dist/.htaccess',
+        dest: '.htaccess'
+      }
     }
   });
 
@@ -49,6 +55,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['sass']);
   grunt.registerTask('serve-watch', ['connect', 'sass', 'watch'])

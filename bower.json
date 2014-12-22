@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "bourbon": "~4.0.2",
-    "neat": "~1.6.0"
+    "neat": "~1.6.0",
+    "apache-server-configs": "~2.11.0"
   }
 }
