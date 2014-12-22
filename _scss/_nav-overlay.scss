@@ -34,7 +34,7 @@
     position: relative;
     font-family: $futura;
     font-size: 4em;
-    line-height: 0;
+    line-height: 0.5;
     text-decoration: none;
     color: inherit;
     &::after {
@@ -43,16 +43,16 @@
       left: 50%;
       content: "";
       width: 100px;
-      height: 30px;
+      height: 20px;
       background: transparent;
       border-radius: 15px;
-      @include transform(translate3d(-50%,0,0));
+      @include transform(translate3d(-50%,10px,0));
       @include transition(all 400ms ease);
     }
     &:hover {
       &::after {
         background: $blue;
-        @include transform(translate3d(-50%,-10px,0));
+        @include transform(translate3d(-50%,0,0));
       }
     }
   }

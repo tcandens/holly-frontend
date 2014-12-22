@@ -236,7 +236,7 @@ h1 {
     position: relative;
     font-family: "ralewaybold", sans-serif;
     font-size: 4em;
-    line-height: 0;
+    line-height: 0.5;
     text-decoration: none;
     color: inherit; }
     .nav-overlay_list a::after {
@@ -245,24 +245,24 @@ h1 {
       left: 50%;
       content: "";
       width: 100px;
-      height: 30px;
+      height: 20px;
       background: transparent;
       border-radius: 15px;
-      -webkit-transform: translate3d(-50%, 0, 0);
-      -moz-transform: translate3d(-50%, 0, 0);
-      -ms-transform: translate3d(-50%, 0, 0);
-      -o-transform: translate3d(-50%, 0, 0);
-      transform: translate3d(-50%, 0, 0);
+      -webkit-transform: translate3d(-50%, 10px, 0);
+      -moz-transform: translate3d(-50%, 10px, 0);
+      -ms-transform: translate3d(-50%, 10px, 0);
+      -o-transform: translate3d(-50%, 10px, 0);
+      transform: translate3d(-50%, 10px, 0);
       -webkit-transition: all 400ms ease;
       -moz-transition: all 400ms ease;
       transition: all 400ms ease; }
     .nav-overlay_list a:hover::after {
       background: #92c3ce;
-      -webkit-transform: translate3d(-50%, -10px, 0);
-      -moz-transform: translate3d(-50%, -10px, 0);
-      -ms-transform: translate3d(-50%, -10px, 0);
-      -o-transform: translate3d(-50%, -10px, 0);
-      transform: translate3d(-50%, -10px, 0); }
+      -webkit-transform: translate3d(-50%, 0, 0);
+      -moz-transform: translate3d(-50%, 0, 0);
+      -ms-transform: translate3d(-50%, 0, 0);
+      -o-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0); }
 
 .hamburger {
   position: fixed;
@@ -530,7 +530,7 @@ h1 {
   text-align: center; }
   .about-copy p {
     margin: 0 auto;
-    max-width: 42em;
+    max-width: 27em;
     margin-bottom: 1em; }
   @media (min-width: 50em) {
     .about-copy {
