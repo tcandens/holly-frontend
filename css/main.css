@@ -79,22 +79,46 @@ ul {
   .header-main .header_figure-left {
     left: 0;
     bottom: 0;
-    width: 30%;
-    height: auto;
+    width: 99px;
+    height: 159.0px;
     background-image: url("../img/header-main/chance-postit.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
+    @media (min-width: 35em) and (max-width: 50em) {
+      .header-main .header_figure-left {
+        width: 118.8px;
+        height: 190.8px; } }
+    @media (min-width: 50em) and (max-width: 70em) {
+      .header-main .header_figure-left {
+        width: 158.4px;
+        height: 254.4px; } }
+    @media (min-width: 70em) {
+      .header-main .header_figure-left {
+        width: 237.6px;
+        height: 381.6px; } }
   .header-main .header_figure-right {
     top: 0;
     right: 0;
-    width: 80%;
-    height: auto;
+    width: 214.5px;
+    height: 370.5px;
     margin-right: -100px;
     background-image: url("../img/header-main/notebook.png");
-    background-size: contain;
+    background-size: cover;
     background-position: top 100px;
     background-repeat: no-repeat; }
+    @media (min-width: 35em) and (max-width: 50em) {
+      .header-main .header_figure-right {
+        width: 257.4px;
+        height: 444.6px; } }
+    @media (min-width: 50em) and (max-width: 70em) {
+      .header-main .header_figure-right {
+        width: 343.2px;
+        height: 592.8px; } }
+    @media (min-width: 70em) {
+      .header-main .header_figure-right {
+        width: 514.8px;
+        height: 889.2px; } }
 
 .header-main_title {
   position: relative;
