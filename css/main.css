@@ -5,6 +5,32 @@
 
 /* COLORS */
 /* FONT STACKS */
+/* Keyframe snippet from http://www.welcometocreature.com */
+@-webkit-keyframes kf-glitch {
+  0% {
+    -webkit-transform: skewX(9deg); }
+  10% {
+    -webkit-transform: skewX(-8deg); }
+  20% {
+    -webkit-transform: skewX(23deg); }
+  30% {
+    -webkit-transform: skewX(-110deg); }
+  40% {
+    -webkit-transform: skewX(29deg); }
+  50% {
+    -webkit-transform: skewX(-90deg);
+    text-shadow: -7px -1px 0px #fdee00, 6px 2px 0px #21abcd, 3px -2px 0px #ff2052; }
+  60% {
+    -webkit-transform: skewX(3deg); }
+  70% {
+    -webkit-transform: skewX(-2deg); }
+  80% {
+    -webkit-transform: skewX(1deg); }
+  90% {
+    -webkit-transform: skewX(0deg);
+    text-shadow: -7px -1px 0px #fdee00, 6px 2px 0px #21abcd, 3px -2px 0px #ff2052; }
+  100% {
+    -webkit-transform: skewX(0deg); } }
 html, body {
   margin: 0;
   width: 100%;
@@ -168,32 +194,12 @@ ul {
   text-transform: uppercase;
   font-size: 2em;
   color: #f8d7e1;
-  text-shadow: 3px 3px 5px grey;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  transition: all 200ms ease; }
+  text-shadow: 3px 3px 5px grey; }
 
-.adjective_fade {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 50%, 0);
-  -moz-transform: translate3d(0, 50%, 0);
-  -ms-transform: translate3d(0, 50%, 0);
-  -o-transform: translate3d(0, 50%, 0);
-  transform: translate3d(0, 50%, 0); }
-
-.adjective_shiftup {
-  opacity: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -o-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0); }
+.adjective_glitch {
+  -webkit-animation: kf-glitch 0.1s ease-in;
+  -moz-animation: kf-glitch 0.1s ease-in;
+  animation: kf-glitch 0.1s ease-in; }
 
 .article {
   position: relative; }

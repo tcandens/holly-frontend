@@ -18,6 +18,7 @@ $('.hamburger').on('click', function(e) {
   $('html').toggleClass('nav-active_scroll-freeze');
 });
 
+/* Googly-Eye Shuffler */
 // Adjective Swapper
 var adjectiveList = [
   ["Problem Solver", "a"],
@@ -34,6 +35,8 @@ var $shuffleScope = $('.shuffle-scope'),
     $articleAn = $shuffleScope.find('.article-an');
 
 var shuffle = function() {
+
+  // Article "A/An" switch
   $button.attr("src", "img/googly-eye.gif");
   if ( $articleAn.hasClass('article-an_on') ) {
     $articleAn.removeClass('article-an_on').addClass('article-an_shiftdown');
@@ -41,6 +44,7 @@ var shuffle = function() {
       $articleAn.removeClass('article-an_shiftdown');
     }, 200);
   };
+
 
   var rand = Math.floor(Math.random() * adjectiveList.length );
 
@@ -61,22 +65,19 @@ var shuffle = function() {
     console.log('Shit');
   }
 
-
-  $adjective.addClass('adjective_fade');
+  $adjective.addClass('adjective_glitch');
   $article.addClass('article_fade');
   var timeout01 = setTimeout(function() {
     // Change Adjective
+    $adjective.removeClass('adjective_glitch');
     $adjective.html( newAdj );
     // Switch position of adjective for illusion
-    $adjective.removeClass('adjective_fade');
-    $adjective.addClass('adjective_shiftup');
     // Article fade
     $article.removeClass('article_fade');
     $article.addClass('article_shiftup');
   }, 200);
   var timeout02 = setTimeout(function() {
     // Kill transforms for appearence of shifting back in from top
-    $adjective.removeClass('adjective_shiftup');
     $article.removeClass('article_shiftup');
   }, 400);
   shuffleCounter = rand;
