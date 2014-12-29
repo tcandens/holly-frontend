@@ -695,29 +695,4 @@ h1 {
   .social-icons_link:hover {
     opacity: 0.4; }
 
-.js-ready .lazy-load {
-  opacity: 0;
-  -webkit-transition: all 2000ms ease-in-out;
-  -moz-transition: all 2000ms ease-in-out;
-  transition: all 2000ms ease-in-out; }
-.js-ready .lazy-load__shift {
-  -webkit-transform: translate3d(0, 100px, 0);
-  -moz-transform: translate3d(0, 100px, 0);
-  -ms-transform: translate3d(0, 100px, 0);
-  -o-transform: translate3d(0, 100px, 0);
-  transform: translate3d(0, 100px, 0); }
-.js-ready .lazy-load__plain {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-.js-ready .lazy-load__done .lazy-load {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
 /*# sourceMappingURL=main.css.map */

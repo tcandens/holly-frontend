@@ -1,15 +1,6 @@
 // Cut some mustard
 $('html').toggleClass('no-js').addClass('js-ready');
 
-// Lazy Loading By Class
-// Collect Items with class
-$lazyLoads = $('.lazy-load');
-// Show / Fade-in elements onLoad
-// $('body').addClass('lazy-load__done');
-$( window ).on('load', function(){
-  $('body').addClass('lazy-load__done');
-});
-
 // Hamburger Toggles Navigation
 $('.hamburger').on('click', function(e) {
   e.preventDefault();
