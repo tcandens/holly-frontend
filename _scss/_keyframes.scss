@@ -1,14 +1,42 @@
 /* Keyframe snippet from http://www.welcometocreature.com */
-@-webkit-keyframes kf-glitch {
-  0% { -webkit-transform: skewX(9deg); }
-  10% { -webkit-transform: skewX(-8deg); }
-  20% { -webkit-transform: skewX(23deg); }
-  30% { -webkit-transform: skewX(-110deg); }
-  40% { -webkit-transform: skewX(29deg); }
-  50% { -webkit-transform: skewX(-90deg);text-shadow: -7px -1px 0px #fdee00, 6px 2px 0px #21abcd, 3px -2px 0px #ff2052;  }
-  60% { -webkit-transform: skewX(3deg); }
-  70% { -webkit-transform: skewX(-2deg); }
-  80% { -webkit-transform: skewX(1deg); }
-  90% { -webkit-transform: skewX(0deg);text-shadow: -7px -1px 0px #fdee00, 6px 2px 0px #21abcd, 3px -2px 0px #ff2052; }
-  100% { -webkit-transform: skewX(0deg); }
+@include keyframes(kf-glitch) {
+  0% {
+    @include transform(skewX(9deg));
+  }
+  10% {
+    @include transform(skewX(-8deg));
+  }
+  20% {
+    @include transform(skewX(23deg));
+  }
+  30% {
+    @include transform(skewX(-110deg));
+  }
+  40% {
+    @include transform(skewX(29deg));
+  }
+  50% {
+    @include transform(skewX(-90deg));
+    text-shadow:  -7px -1px 0px #fdee00,
+                  6px 2px 0px #21abcd,
+                  3px -2px 0px #ff2052;
+  }
+  60% {
+    @include transform(skewX(3deg));
+  }
+  70% {
+    @include transform(skewX(-2deg));
+  }
+  80% {
+    @include transform(skewX(1deg));
+  }
+  90% {
+    @include transform(skewX(0deg));
+    text-shadow:  -7px -1px 0px #fdee00,
+                  6px 2px 0px #21abcd,
+                  3px -2px 0px #ff2052;
+  }
+  100% {
+    @include transform(skewX(0deg));
+  }
 }
