@@ -54,22 +54,25 @@
 }
 
 @include keyframes(kf_giggle) {
-  10% {
-    @include transform(translate3d(0,-10%,0));
+  5% {
+    @include transform(translate3d(-10%,0,0));
   }
-  30% {
-    @include transform(translate3d(0,10%,0));
+  15% {
+    @include transform(translate3d(10%,0,0));
+  }
+  25% {
+    @include transform(translate3d(-10%,0,0));
+  }
+  35% {
+    @include transform(translate3d(10%,0,0));
+  }
+  45% {
+    @include transform(translate3d(-10%,0,0));
   }
   50% {
-    @include transform(translate3d(0,-10%,0));
-  }
-  70% {
-    @include transform(translate3d(0,10%,0));
-  }
-  90% {
-    @include transform(translate3d(0,-10%,0));
+    @include transform(translate3d(0,0,0));
   }
   100% {
-    @include transform(translate3d(0,0,0));
+    
   }
 }

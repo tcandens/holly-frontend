@@ -163,7 +163,11 @@
   }
 }
 .shuffle-button {
-  @include animation(kf_wiggle 4000ms ease);
+  @include animation(kf_giggle 4000ms);
+  @include animation-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
+  @include animation-delay(2000ms);
+  @include animation-iteration-count(infinite);
+  // @include transition(all 200ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
   cursor: pointer;
   width: 100%;
   height: auto;
