@@ -132,7 +132,7 @@ ul {
   -o-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
 
-@media (max-width: 50em) and (orientation: landscape) {
+@media screen and (max-width: 50em) and (orientation: landscape) {
   .holly_logo {
     position: absolute;
     top: 0;
@@ -143,7 +143,7 @@ ul {
 .salutation, .intro, .adjective {
   margin: 0; }
 
-@media (max-width: 50em) and (orientation: landscape) {
+@media screen and (max-width: 50em) and (orientation: landscape) {
   .salutation, .shuffle-scope {
     margin-left: 120px; } }
 
