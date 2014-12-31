@@ -20,7 +20,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     @include bp(phablet) {
-      @include build-figure($width, $aspect, 0.6);
+      @include build-figure($width, $aspect, 0.5);
     }
     @include bp(tablet) {
       @include build-figure($width, $aspect, 0.8);
@@ -42,7 +42,7 @@
     background-position: top 100px;
     background-repeat: no-repeat;
     @include bp(phablet) {
-      @include build-figure($width, $aspect, 0.6);
+      @include build-figure($width, $aspect, 0.5);
     }
     @include bp(tablet) {
       @include build-figure($width, $aspect, 0.8);
