@@ -77,6 +77,21 @@ var shuffle = function() {
 
 $button.on('click', shuffle);
 
+// Position push-about
+
+var pushAbout = {
+  // Find height of about
+  pushHeight: function() {
+    return $('.about').height();
+  },
+  // Set height of push-about
+  setPush: function() {
+    $('.push-about').height(this.pushHeight);
+  }
+}
+
+pushAbout.setPush();
+
 var $hamburger = $('.hamburger');
 
 $('.waypoint_darken').waypoint(function() {
@@ -87,10 +102,10 @@ $('.waypoint_darken').waypoint(function() {
   }
 });
 
-$('.waypoint_darken').next().waypoint(function() {
-  $hamburger.toggleClass('waypoint-action_darken');
-},{
-  offset: function() {
-    return $hamburger.height() * 1;
-  }
-})
+// $('.waypoint_darken').next().waypoint(function() {
+//   $hamburger.toggleClass('waypoint-action_darken');
+// },{
+//   offset: function() {
+//     return $hamburger.height() * 1;
+//   }
+// })
