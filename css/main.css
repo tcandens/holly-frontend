@@ -833,6 +833,9 @@ h1 {
     font-size: 0.7em;
     margin: 0 auto;
     max-width: 27em; }
+    @media screen and (max-width: 50em) and (orientation: landscape) {
+      .about-copy p {
+        max-width: 100%; } }
   @media (min-width: 50em) {
     .about-copy {
       padding: 0; } }
@@ -841,7 +844,7 @@ h1 {
   margin-bottom: 0.5em; }
 
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;

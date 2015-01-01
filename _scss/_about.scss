@@ -113,6 +113,9 @@ $footer-height: 120px;
     margin: 0 auto;
     max-width: 27em;
     // margin-bottom: 1em;
+    @include bp(landscape) {
+      max-width: 100%;
+    }
   }
   @include bp(tabletplus) {
     padding: 0;
@@ -122,7 +125,7 @@ $footer-height: 120px;
   margin-bottom: 0.5em;
 }
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
