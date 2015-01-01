@@ -177,35 +177,69 @@ $footer-height: 120px;
   $dimension: 70px;
   width: $dimension;
   height: $dimension;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 100%;
-  border: 20px solid $pink;
   @include hide-text;
   &[href^="http://www.facebook"] {
-    background-color: $icon-facebook;
+    // background-color: $icon-facebook;
     background-image: url('../img/icons/facebook.svg');
   }
   &[href^="http://www.twitter"] {
-    background-color: $icon-twitter;
     background-image: url('../img/icons/twitter.svg');
+    // background-color: $icon-twitter;
   }
   &[href^="http://www.linkedin"] {
-    background-color: $icon-linkedin;
+    // background-color: $icon-linkedin;
     background-image: url('../img/icons/linkedin.svg');
   }
   &[href^="http://www.tumblr.com"] {
-    background-color: $icon-tumblr;
+    // background-color: $icon-tumblr;
     background-image: url('../img/icons/tumblr.svg');
   }
   &[href^="http://www.instagram.com"] {
-    background-color: $icon-instagram;
+    // background-color: $icon-instagram;
     background-image: url('../img/icons/instagram.svg');
   }
-  &:hover {
-    background-color: $pink;
-    background-size: cover;
-    border-radius: 0;
-    border: 0;
+  @include bp(desktop) {
+    border-radius: 100%;
+    border: 20px solid $pink;
+    &:hover {
+      background-color: $pink;
+      background-size: cover;
+      border-radius: 0;
+      border: 0;
+    }
+    &[href^="http://www.facebook"] {
+      background-color: $icon-facebook;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.twitter"] {
+      background-color: $icon-twitter;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.linkedin"] {
+      background-color: $icon-linkedin;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.tumblr.com"] {
+      background-color: $icon-tumblr;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.instagram.com"] {
+      background-color: $icon-instagram;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
   }
 }
