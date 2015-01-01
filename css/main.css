@@ -295,8 +295,8 @@ ul {
     -webkit-animation: kf_fade-up 2000ms ease;
     -moz-animation: kf_fade-up 2000ms ease;
     animation: kf_fade-up 2000ms ease;
-    left: 0;
-    bottom: 0;
+    left: 0.5em;
+    bottom: 0.5em;
     width: 99px;
     height: 159.0px;
     background-image: url("../img/header-main/chance-postit.png");
@@ -355,18 +355,15 @@ ul {
 
 @media screen and (max-width: 50em) and (orientation: landscape) {
   .holly_logo {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: 100px;
-    height: 100px; } }
+    width: 270px !important;
+    height: 270px !important; } }
 
 .salutation, .intro, .adjective {
   margin: 0; }
 
 @media screen and (max-width: 50em) and (orientation: landscape) {
   .salutation, .shuffle-scope {
-    margin-left: 120px; } }
+    display: none; } }
 
 .intro {
   display: inline-block;
