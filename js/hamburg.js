@@ -8,10 +8,10 @@ $('.waypoint_darken').waypoint(function() {
   }
 });
 
-// $('.waypoint_darken').next().waypoint(function() {
-//   $hamburger.toggleClass('waypoint-action_darken');
-// },{
-//   offset: function() {
-//     return $hamburger.height() * 1;
-//   }
-// })
+$('.waypoint_darken').next().waypoint(function() {
+  $hamburger.toggleClass('waypoint-action_darken');
+},{
+  offset: function() {
+    return $hamburger.height() * 1;
+  }
+})
