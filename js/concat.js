@@ -86,7 +86,8 @@ var pushAbout = {
   },
   // Set height of push-about
   setPush: function() {
-    $('.push-about').height(this.pushHeight);
+    // $('.projects').css('margin-bottom', this.pushHeight );
+    $('.push-about').height( this.pushHeight );
   }
 }
 
@@ -108,4 +109,4 @@ $('.waypoint_darken').next().waypoint(function() {
   offset: function() {
     return $hamburger.height() * 1;
   }
-})
+});
