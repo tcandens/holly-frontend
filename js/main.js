@@ -76,3 +76,5 @@ var shuffle = function() {
 };
 
 $button.on('click', shuffle);
+
+console.log("Testing gitpull.php");

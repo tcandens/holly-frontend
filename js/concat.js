@@ -77,6 +77,8 @@ var shuffle = function() {
 
 $button.on('click', shuffle);
 
+console.log("Testing gitpull.php");
+
 var $hamburger = $('.hamburger');
 
 $('.waypoint_darken').waypoint(function() {
