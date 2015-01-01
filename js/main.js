@@ -76,3 +76,19 @@ var shuffle = function() {
 };
 
 $button.on('click', shuffle);
+
+// Position push-about
+
+var pushAbout = {
+  // Find height of about
+  pushHeight: function() {
+    return $('.about').height();
+  },
+  // Set height of push-about
+  setPush: function() {
+    // $('.projects').css('margin-bottom', this.pushHeight );
+    $('.push-about').height( this.pushHeight );
+  }
+}
+
+pushAbout.setPush();

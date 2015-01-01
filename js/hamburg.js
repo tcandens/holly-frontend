@@ -14,4 +14,4 @@ $('.waypoint_darken').next().waypoint(function() {
   offset: function() {
     return $hamburger.height() * 1;
   }
-})
+});
