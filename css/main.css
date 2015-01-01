@@ -886,12 +886,10 @@ h1 {
   display: block;
   width: 70px;
   height: 70px;
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: opacity 300ms ease;
-  -moz-transition: opacity 300ms ease;
-  transition: opacity 300ms ease;
+  border-radius: 100%;
+  border: 20px solid #f8d7e1;
   overflow: hidden; }
   .social-icons_link:before {
     content: "";
@@ -899,16 +897,24 @@ h1 {
     width: 0;
     height: 100%; }
   .social-icons_link[href^="http://www.facebook"] {
+    background-color: #53be93;
     background-image: url("../img/icons/facebook.svg"); }
   .social-icons_link[href^="http://www.twitter"] {
+    background-color: #db98e5;
     background-image: url("../img/icons/twitter.svg"); }
   .social-icons_link[href^="http://www.linkedin"] {
+    background-color: #92c3ce;
     background-image: url("../img/icons/linkedin.svg"); }
   .social-icons_link[href^="http://www.tumblr.com"] {
+    background-color: #c2cde9;
     background-image: url("../img/icons/tumblr.svg"); }
   .social-icons_link[href^="http://www.instagram.com"] {
+    background-color: #f79e86;
     background-image: url("../img/icons/instagram.svg"); }
   .social-icons_link:hover {
-    opacity: 0.4; }
+    background-color: #f8d7e1;
+    background-size: cover;
+    border-radius: 0;
+    border: 0; }
 
 /*# sourceMappingURL=main.css.map */
