@@ -75,7 +75,10 @@ var shuffle = function() {
 
 };
 
-$button.on('click', shuffle);
+$button.on('click', function(e) {
+  e.preventDefault();
+  shuffle();
+});
 
 // Position push-about
 
