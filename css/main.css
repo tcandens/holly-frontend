@@ -949,4 +949,7 @@ h1 {
         .social-icons_link[href^="http://www.instagram.com"]:hover {
           background-color: transparent; } }
 
+.project-WW .header-project {
+  background-color: #f6e2d9; }
+
 /*# sourceMappingURL=main.css.map */
