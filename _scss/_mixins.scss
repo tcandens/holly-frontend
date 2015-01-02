@@ -27,3 +27,9 @@
     @media screen and (max-width: 50em) and (orientation: landscape) { @content ; }
   }
 }
+
+// Inject logic for easier @mediaqueries for scaling figures
+@mixin build-figure($width, $ratio, $scalar: 1, $weight: 1) {
+  width: $width * $weight * $scalar;
+  height: ( $width / $ratio ) * $weight * $scalar;
+}

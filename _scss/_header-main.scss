@@ -1,8 +1,3 @@
-// Inject logic for easier @mediaqueries for scaling figures
-@mixin build-figure($width, $ratio, $scalar: 1, $weight: 1) {
-  width: $width * $weight * $scalar;
-  height: ( $width / $ratio ) * $weight * $scalar;
-}
 
 .header-main {
   background-image: url('../img/header-main/bg.jpg');
@@ -52,15 +47,7 @@
     }
   }
 }
-.header-main_title {
-  position: relative;
-  top: 50%;
-  margin: 0em auto;
-  // max-width: 90%;
-  max-height: 100%;
-  text-align: center;
-  @include transform(translate3d(0,-50%,0));
-}
+
 .holly_logo {
   @include bp(landscape) {
     width: 270px !important;
@@ -79,6 +66,8 @@
 .intro {
   display: inline-block;
   margin-bottom: 0.2em;
+  font-weight: 400;
+  font-size: 1.4em;
   max-width: 14em;
 }
 .adjective-container {
@@ -90,12 +79,8 @@
 .adjective {
   display: table-cell;
   vertical-align: middle;
-  margin: 0;
   width: 100%;
   min-height: 2.5em;
-  font-family: $futura;
-  text-transform: uppercase;
-  font-size: 2em;
   color: $pink;
   text-shadow: 3px 3px 5px grey;
   // opacity: 1;

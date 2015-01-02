@@ -288,6 +288,18 @@ ul {
 .header_figure-left, .header_figure-right {
   position: absolute; }
 
+.header_title-block {
+  position: relative;
+  top: 50%;
+  margin: 0em auto;
+  max-height: 100%;
+  text-align: center;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0); }
+
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
   background-size: cover; }
@@ -341,18 +353,6 @@ ul {
         width: 514.8px;
         height: 889.2px; } }
 
-.header-main_title {
-  position: relative;
-  top: 50%;
-  margin: 0em auto;
-  max-height: 100%;
-  text-align: center;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -o-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0); }
-
 @media screen and (max-width: 50em) and (orientation: landscape) {
   .holly_logo {
     width: 270px !important;
@@ -368,6 +368,8 @@ ul {
 .intro {
   display: inline-block;
   margin-bottom: 0.2em;
+  font-weight: 400;
+  font-size: 1.4em;
   max-width: 14em; }
 
 .adjective-container {
@@ -379,12 +381,8 @@ ul {
 .adjective {
   display: table-cell;
   vertical-align: middle;
-  margin: 0;
   width: 100%;
   min-height: 2.5em;
-  font-family: "ralewaybold", sans-serif;
-  text-transform: uppercase;
-  font-size: 2em;
   color: #f8d7e1;
   text-shadow: 3px 3px 5px grey; }
 
@@ -482,11 +480,13 @@ html, body {
     html, body {
       font-size: 1.5em; } }
 
+h1, h2 {
+  margin: 0; }
+
 h1 {
-  margin-top: 0;
-  font-size: 1.4em;
-  font-weight: 400;
-  line-height: 1; }
+  font-family: "ralewaybold", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em; }
 
 .nav-overlay {
   display: block;

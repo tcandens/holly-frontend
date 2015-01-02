@@ -1,20 +1,19 @@
-@import '../bower_components/bourbon/dist/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
+@import '../bower_components/bourbon/dist/bourbon',
+        '../bower_components/neat/app/assets/stylesheets/neat';
 
 @import 'vars',
         'mixins',
         'keyframes',
-        'fonts';
-
-@import 'global';
-@import 'header';
-
-@import 'header-main';
-@import 'navigation';
-@import 'typography';
-@import 'nav-overlay';
-@import 'hamburger';
-@import 'project-list',
-        'project-list_response';
-@import 'project-filter';
-@import 'about';
+        'fonts',
+        'global',
+        'header',
+        'header-main',
+        'navigation',
+        'typography',
+        'nav-overlay',
+        'hamburger',
+        'project-list',
+        'project-list_response',
+        'project-filter',
+        'about',
+        'project-page';
