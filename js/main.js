@@ -86,9 +86,20 @@ var pushAbout = {
   },
   // Set height of push-about
   setPush: function() {
-    // $('.projects').css('margin-bottom', this.pushHeight );
     $('.push-about').height( this.pushHeight );
   }
 }
 
+var projectItemHover = {
+  set: function() {
+    $('.project-list_item').hover(function() {
+      $(this).toggleClass('hover');
+    }, function() {
+      $(this).toggleClass('hover');
+    });
+  }
+};
+
+
+projectItemHover.set();
 pushAbout.setPush();

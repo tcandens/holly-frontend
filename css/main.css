@@ -619,7 +619,9 @@ h1 {
   margin-bottom: 1em;
   width: 100%;
   height: auto;
-  list-style: none; }
+  list-style: none;
+  border-radius: 50%;
+  overflow: hidden; }
   .project-list_item img {
     width: 100%;
     height: 100%; }
@@ -638,14 +640,13 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease;
-  -moz-transition: opacity 400ms ease;
-  transition: opacity 400ms ease; }
-  .project-list_thumbnail-hover:hover {
-    opacity: 1; }
+  overflow: hidden;
+  -webkit-transition: height 400ms ease;
+  -moz-transition: height 400ms ease;
+  transition: height 400ms ease; }
+
+.hover .project-list_thumbnail-hover {
+  height: 0; }
 
 /* Project list grid variables */
 @media (min-width: 50em) and (max-width: 70em) {
@@ -667,7 +668,11 @@ h1 {
       -moz-transform: translate3d(-547.5px, 335px, 0);
       -ms-transform: translate3d(-547.5px, 335px, 0);
       -o-transform: translate3d(-547.5px, 335px, 0);
-      transform: translate3d(-547.5px, 335px, 0); } }
+      transform: translate3d(-547.5px, 335px, 0); }
+
+  .project-list_thumbnail-hover img {
+    width: 335px;
+    height: 335px; } }
 @media (min-width: 35em) and (max-width: 50em) {
   .project-list {
     margin-bottom: -135px;
@@ -687,7 +692,11 @@ h1 {
       -moz-transform: translate3d(-397.5px, 235px, 0);
       -ms-transform: translate3d(-397.5px, 235px, 0);
       -o-transform: translate3d(-397.5px, 235px, 0);
-      transform: translate3d(-397.5px, 235px, 0); } }
+      transform: translate3d(-397.5px, 235px, 0); }
+
+  .project-list_thumbnail-hover img {
+    width: 235px;
+    height: 235px; } }
 @media (min-width: 70em) {
   .project-list {
     margin-bottom: -206.66667px;
@@ -707,7 +716,11 @@ h1 {
       -moz-transform: translate3d(-866.66667px, 306.66667px, 0);
       -ms-transform: translate3d(-866.66667px, 306.66667px, 0);
       -o-transform: translate3d(-866.66667px, 306.66667px, 0);
-      transform: translate3d(-866.66667px, 306.66667px, 0); } }
+      transform: translate3d(-866.66667px, 306.66667px, 0); }
+
+  .project-list_thumbnail-hover img {
+    width: 306.66667px;
+    height: 306.66667px; } }
 .project-filter {
   margin: 0 auto 2em auto;
   padding: 0;

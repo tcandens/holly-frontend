@@ -66,6 +66,11 @@
     }
 
   }
+
+  .project-list_thumbnail-hover img {
+    width: $item-diameter;
+    height: $item-diameter;
+  }
 }
 
 @include bp(tablet) {
