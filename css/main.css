@@ -566,6 +566,9 @@ h1 {
   text-transform: uppercase;
   font-size: 2em; }
 
+p:first-of-type {
+  margin-top: 0; }
+
 .nav-overlay {
   display: block;
   visibility: hidden;
@@ -1051,9 +1054,14 @@ h1 {
       .project .project-description-categories {
         width: auto;
         height: 100%;
+        width: 20%;
         float: left; }
         .project .project-description-categories li {
           display: block; } }
+  @media (min-width: 50em) {
+    .project .project-description-words {
+      float: left;
+      width: 80%; } }
   .project .project-photo-container img {
     display: block;
     border: 0;

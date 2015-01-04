@@ -29,10 +29,18 @@
     @include bp(tabletplus) {
       width: auto;
       height: 100%;
+      width: 20%;
       float: left;
       li {
         display: block;
       }
+    }
+  }
+
+  .project-description-words {
+    @include bp(tabletplus) {
+      float: left;
+      width: 80%;
     }
   }
 
