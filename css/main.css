@@ -951,5 +951,29 @@ h1 {
 
 .project-WW .header-project {
   background-color: #f6e2d9; }
+.project-WW .header-figure_right {
+  -webkit-animation: kf_fade-up 2000ms ease;
+  -moz-animation: kf_fade-up 2000ms ease;
+  animation: kf_fade-up 2000ms ease;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 166.96429px;
+  background-image: url("../img/projects/walker-wedding/header-flowers.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media (min-width: 35em) and (max-width: 50em) {
+    .project-WW .header-figure_right {
+      width: 150px;
+      height: 166.96429px; } }
+  @media (min-width: 50em) and (max-width: 70em) {
+    .project-WW .header-figure_right {
+      width: 240px;
+      height: 267.14286px; } }
+  @media (min-width: 70em) {
+    .project-WW .header-figure_right {
+      width: 360px;
+      height: 400.71429px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@
 .header-main {
   background-image: url('../img/header-main/bg.jpg');
   background-size: cover;
-  $animation_header-delay: 2000ms;
+  
   .header_figure-left {
     @include animation(kf_fade-up $animation_header-delay ease);
     $aspect: 0.622641509; // aspect = [image X] / [image Y]
