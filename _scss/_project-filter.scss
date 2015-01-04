@@ -50,9 +50,37 @@
     width: 25%;
     // color: $offblack !important;
     // background-color: white !important;
-    &:hover {
-      background-color: inherit;
-      color: inherit;
+    &:nth-child(1) {
+      background-color: transparent;
+      color: lighten($icon-facebook, 20%);
+      &:hover {
+        background-color: lighten($icon-facebook, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(2) {
+      background-color: transparent;
+      color: lighten($icon-twitter, 20%);
+      &:hover {
+        background-color: lighten($icon-twitter, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(3) {
+      background-color: transparent;
+      color: lighten($icon-instagram, 20%);
+      &:hover {
+        background-color: lighten($icon-instagram, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(4) {
+      background-color: transparent;
+      color: lighten($icon-linkedin, 20%);
+      &:hover {
+        background-color: lighten($icon-linkedin, 20%);
+        color: white;
+      }
     }
   }
 }
