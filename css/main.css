@@ -344,6 +344,37 @@ ul {
   -o-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
 
+.header_title {
+  font-size: 3em; }
+
+.title_article {
+  display: block;
+  font-family: "quicksandregular", futura, "Open Sans", sans-serif;
+  font-size: 0.4em; }
+
+.header_divider {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto 1em auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position-x: center; }
+  .header_divider:before, .header_divider:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 3em;
+    height: 2px;
+    background: inherit; }
+  .header_divider:before {
+    top: 50%;
+    left: -3em; }
+  .header_divider:after {
+    top: 50%;
+    left: 100%; }
+
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
   background-size: cover; }
@@ -516,7 +547,8 @@ ul {
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
   font-size: 1.1em;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1; }
   @media (min-width: 50em) and (max-width: 70em) {
     html, body {
       font-size: 1.2em; } }
@@ -525,7 +557,8 @@ html, body {
       font-size: 1.5em; } }
 
 h1, h2 {
-  margin: 0; }
+  margin: 0;
+  line-height: 1; }
 
 h1 {
   font-family: "ralewaybold", sans-serif;
@@ -993,7 +1026,7 @@ h1 {
         .social-icons_link[href^="http://www.instagram.com"]:hover {
           background-color: transparent; } }
 
-.project-WW .header-project {
+.project-WW .project_header {
   background-color: #f6e2d9; }
 .project-WW .header_figure-right {
   -webkit-animation: kf_fade-down 2000ms ease;
@@ -1019,5 +1052,15 @@ h1 {
     .project-WW .header_figure-right {
       width: 360px;
       height: 400.71429px; } }
+.project-WW .header_title {
+  color: #9d4c43; }
+.project-WW .header_divider {
+  height: 3em;
+  width: 3em;
+  background-image: url("../img/projects/walker-wedding/icon-cake.png"); }
+  .project-WW .header_divider:before, .project-WW .header_divider:after {
+    background-color: #9d4c43;
+    top: auto !important;
+    bottom: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */

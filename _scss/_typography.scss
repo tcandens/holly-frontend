@@ -2,6 +2,7 @@ html, body {
   font-family: $quicksand;
   font-size: 1.1em;
   font-weight: 700;
+  line-height: 1;
   @include bp(tablet) {
     font-size: 1.2em;
   }
@@ -12,6 +13,7 @@ html, body {
 
 h1, h2 {
   margin: 0;
+  line-height: 1;
 }
 
 h1 {

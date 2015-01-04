@@ -20,3 +20,37 @@
   text-align: center;
   @include transform(translate3d(0,-50%,0));
 }
+.header_title {
+  font-size: 3em;
+}
+.title_article {
+  display: block;
+  font-family: $quicksand;
+  font-size: 0.4em;
+}
+.header_divider {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto 1em auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position-x: center;
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 3em;
+    height: 2px;
+    background: inherit;
+  }
+  &:before {
+    top: 50%;
+    left: -3em;
+  }
+  &:after {
+    top: 50%;
+    left: 100%;
+  }
+}

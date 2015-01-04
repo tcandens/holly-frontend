@@ -1,14 +1,39 @@
-$WW_header: #f6e2d9;
+$WW_headerbg: #f6e2d9;
+$WW_header: #9d4c43;
 
 .project {
+  .project_header {
 
+  }
+  // .header_divider {
+  //   position: relative;
+  //   width: 1em;
+  //   height: 1em;
+  //   margin: 0 auto;
+  //   background: $offblack;
+  //   &:before, &:after {
+  //     display: block;
+  //     content: '';
+  //     position: absolute;
+  //     width: 3em;
+  //     height: 2px;
+  //     background: inherit;
+  //   }
+  //   &:before {
+  //     top: 0.5em;
+  //     left: -3em;
+  //   }
+  //   &:after {
+  //     top: 0.5em;
+  //     left: 1em;
+  //   }
+  // }
 }
 
 .project-WW {
-  .header-project {
-    background-color: $WW_header;
+  .project_header {
+    background-color: $WW_headerbg;
   }
-
   .header_figure-right {
     @include animation(kf_fade-down $animation_header-delay ease);
     $aspect: 0.898395722; // aspect = [image X] / [image Y]
@@ -30,5 +55,17 @@ $WW_header: #f6e2d9;
       @include build-figure($width, $aspect, 1.2);
     }
   }
-
+  .header_title {
+    color: $WW_header;
+  }
+  .header_divider {
+    height: 3em;
+    width: 3em;
+    background-image: url('../img/projects/walker-wedding/icon-cake.png');
+    &:before, &:after {
+      background-color: $WW-header;
+      top: auto !important;
+      bottom: 0.5em;
+    }
+  }
 }
