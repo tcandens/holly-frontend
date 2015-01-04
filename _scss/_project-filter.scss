@@ -1,31 +1,58 @@
 .project-filter {
-  margin: 0 auto 2em auto;
+  margin: 0 0 1em 0;
   padding: 0;
-  // margin-bottom: 2em;
   width: 100%;
-  // height: 1em;
   background: white;
   text-align: center;
-  @include bp(mobileonly) {
-    margin-bottom: 0;
-    padding: 0 3em;
-  }
+  @include clearfix();
 }
 .project-filter_category {
-  display: inline-block;
+  display: block;
+  float: left;
+  width: 100%;
   padding: 0.3em 1em;
   font-family: $futura;
-  border-radius: 10px;
+  color: white;
   @include transition(all 300ms ease);
   a {
     text-decoration: none;
     color: inherit;
   }
-  &:hover {
-    background: $offblack;
-    color: white;
+  &:nth-child(1) {
+    background-color: lighten($icon-facebook, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-facebook, 20%);
+    }
   }
-  @include bp(mobileonly) {
-    display: block;
+  &:nth-child(2) {
+    background-color: lighten($icon-twitter, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-twitter, 20%);
+    }
+  }
+  &:nth-child(3) {
+    background-color: lighten($icon-instagram, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-instagram, 20%);
+    }
+  }
+  &:nth-child(4) {
+    background-color: lighten($icon-linkedin, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-linkedin, 20%);
+    }
+  }
+  @include bp(phabletplus) {
+    width: 25%;
+    // color: $offblack !important;
+    // background-color: white !important;
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+    }
   }
 }

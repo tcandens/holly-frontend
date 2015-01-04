@@ -599,6 +599,12 @@ h1 {
 .waypoint-action_darken span, .waypoint-action_darken span:before, .waypoint-action_darken span:after {
   background: #58595b; }
 
+.projects {
+  position: relative;
+  background: white;
+  overflow-y: hidden;
+  z-index: 1; }
+
 .project-list {
   margin: 0 auto;
   padding: 0;
@@ -607,7 +613,6 @@ h1 {
   overflow-y: hidden; }
 
 .project-list_container {
-  padding: 1em;
   width: 100%; }
   @media (min-width: 35em) {
     .project-list_container {
@@ -723,40 +728,55 @@ h1 {
     width: 306.66667px;
     height: 306.66667px; } }
 .project-filter {
-  margin: 0 auto 2em auto;
+  margin: 0 0 1em 0;
   padding: 0;
   width: 100%;
   background: white;
   text-align: center; }
-  @media (max-width: 35em) {
-    .project-filter {
-      margin-bottom: 0;
-      padding: 0 3em; } }
+  .project-filter:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .project-filter_category {
-  display: inline-block;
+  display: block;
+  float: left;
+  width: 100%;
   padding: 0.3em 1em;
   font-family: "ralewaybold", sans-serif;
-  border-radius: 10px;
+  color: white;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   transition: all 300ms ease; }
   .project-filter_category a {
     text-decoration: none;
     color: inherit; }
-  .project-filter_category:hover {
-    background: #343433;
-    color: white; }
-  @media (max-width: 35em) {
+  .project-filter_category:nth-child(1) {
+    background-color: #9ddac1; }
+    .project-filter_category:nth-child(1):hover {
+      background-color: transparent;
+      color: #9ddac1; }
+  .project-filter_category:nth-child(2) {
+    background-color: #f7e9fa; }
+    .project-filter_category:nth-child(2):hover {
+      background-color: transparent;
+      color: #f7e9fa; }
+  .project-filter_category:nth-child(3) {
+    background-color: #fdebe6; }
+    .project-filter_category:nth-child(3):hover {
+      background-color: transparent;
+      color: #fdebe6; }
+  .project-filter_category:nth-child(4) {
+    background-color: #d8eaee; }
+    .project-filter_category:nth-child(4):hover {
+      background-color: transparent;
+      color: #d8eaee; }
+  @media (min-width: 35em) {
     .project-filter_category {
-      display: block; } }
-
-.projects {
-  position: relative;
-  padding-top: 1em;
-  background: white;
-  overflow-y: hidden;
-  z-index: 1; }
+      width: 25%; }
+      .project-filter_category:hover {
+        background-color: inherit;
+        color: inherit; } }
 
 .push-about {
   position: relative;
