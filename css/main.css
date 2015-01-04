@@ -694,6 +694,7 @@ p:first-of-type {
   overflow-y: hidden; }
 
 .project-list_container {
+  padding: 1em;
   width: 100%; }
   @media (min-width: 35em) {
     .project-list_container {
