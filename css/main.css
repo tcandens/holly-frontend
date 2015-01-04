@@ -290,6 +290,7 @@ html, body {
   font-size: 100%; }
 
 ul {
+  margin: 0;
   padding: 0; }
 
 .nav-active_scroll-freeze {
@@ -367,12 +368,11 @@ ul {
     position: absolute;
     width: 3em;
     height: 2px;
+    bottom: 50%;
     background: inherit; }
   .header_divider:before {
-    top: 50%;
     left: -3em; }
   .header_divider:after {
-    top: 50%;
     left: 100%; }
 
 .header-main {
@@ -547,7 +547,7 @@ ul {
 html, body {
   font-family: "quicksandregular", futura, "Open Sans", sans-serif;
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 200;
   line-height: 1; }
   @media (min-width: 50em) and (max-width: 70em) {
     html, body {
@@ -558,7 +558,8 @@ html, body {
 
 h1, h2 {
   margin: 0;
-  line-height: 1; }
+  line-height: 1;
+  font-weight: 700; }
 
 h1 {
   font-family: "ralewaybold", sans-serif;
@@ -1026,6 +1027,43 @@ h1 {
         .social-icons_link[href^="http://www.instagram.com"]:hover {
           background-color: transparent; } }
 
+.project {
+  background-color: white; }
+  .project .project-description {
+    position: relative;
+    padding: 1em; }
+    .project .project-description:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .project .project-description-categories {
+    display: block;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    text-align: center; }
+    .project .project-description-categories li {
+      font-size: 1em;
+      font-weight: 900;
+      display: inline-block;
+      margin: 0 1em; }
+    @media (min-width: 50em) {
+      .project .project-description-categories {
+        width: auto;
+        height: 100%;
+        float: left; }
+        .project .project-description-categories li {
+          display: block; } }
+  .project .project-photo-container img {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+
+/* BELOW are per-project styles that should eventually be split into seperate files */
 .project-WW .project_header {
   background-color: #f6e2d9; }
 .project-WW .header_figure-right {
@@ -1060,7 +1098,6 @@ h1 {
   background-image: url("../img/projects/walker-wedding/icon-cake.png"); }
   .project-WW .header_divider:before, .project-WW .header_divider:after {
     background-color: #9d4c43;
-    top: auto !important;
     bottom: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */

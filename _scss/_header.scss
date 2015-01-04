@@ -43,14 +43,15 @@
     position: absolute;
     width: 3em;
     height: 2px;
+    bottom: 50%;
     background: inherit;
   }
   &:before {
-    top: 50%;
+    // top: 50%;
     left: -3em;
   }
   &:after {
-    top: 50%;
+    // top: 50%;
     left: 100%;
   }
 }

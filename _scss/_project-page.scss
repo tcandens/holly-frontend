@@ -1,34 +1,60 @@
-$WW_headerbg: #f6e2d9;
-$WW_header: #9d4c43;
 
 .project {
+
+  background-color: white;
+
   .project_header {
 
   }
-  // .header_divider {
-  //   position: relative;
-  //   width: 1em;
-  //   height: 1em;
-  //   margin: 0 auto;
-  //   background: $offblack;
-  //   &:before, &:after {
-  //     display: block;
-  //     content: '';
-  //     position: absolute;
-  //     width: 3em;
-  //     height: 2px;
-  //     background: inherit;
-  //   }
-  //   &:before {
-  //     top: 0.5em;
-  //     left: -3em;
-  //   }
-  //   &:after {
-  //     top: 0.5em;
-  //     left: 1em;
-  //   }
-  // }
+
+  .project-description {
+    position: relative;
+    padding: 1em;
+    @include clearfix();
+  }
+
+  .project-description-categories {
+    display: block;
+    height: 100%;
+    width: 100%;
+    // float: left;
+    list-style: none;
+    text-align: center;
+    li {
+      font-size: 1em;
+      font-weight: 900;
+      display: inline-block;
+      margin: 0 1em;
+    }
+    @include bp(tabletplus) {
+      width: auto;
+      height: 100%;
+      float: left;
+      li {
+        display: block;
+      }
+    }
+  }
+
+  .project-photo-container {
+    img {
+      display: block;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
 }
+
+
+/* BELOW are per-project styles that should eventually be split into seperate files */
+
+$WW_headerbg: #f6e2d9;
+$WW_title: #9d4c43;
 
 .project-WW {
   .project_header {
@@ -56,15 +82,15 @@ $WW_header: #9d4c43;
     }
   }
   .header_title {
-    color: $WW_header;
+    color: $WW_title;
   }
   .header_divider {
     height: 3em;
     width: 3em;
     background-image: url('../img/projects/walker-wedding/icon-cake.png');
     &:before, &:after {
-      background-color: $WW-header;
-      top: auto !important;
+      background-color: $WW_title;
+      // top: auto !important;
       bottom: 0.5em;
     }
   }
