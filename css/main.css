@@ -1041,6 +1041,7 @@ p:first-of-type {
       clear: both; }
   .project .project-description-categories {
     display: block;
+    margin-bottom: 1em;
     height: 100%;
     width: 100%;
     list-style: none;
@@ -1055,9 +1056,11 @@ p:first-of-type {
         width: auto;
         height: 100%;
         width: 20%;
-        float: left; }
+        float: left;
+        text-align: left; }
         .project .project-description-categories li {
-          display: block; } }
+          display: block;
+          margin-bottom: 0.5em; } }
   @media (min-width: 50em) {
     .project .project-description-words {
       float: left;

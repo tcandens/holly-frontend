@@ -15,6 +15,7 @@
 
   .project-description-categories {
     display: block;
+    margin-bottom: 1em;
     height: 100%;
     width: 100%;
     // float: left;
@@ -31,8 +32,10 @@
       height: 100%;
       width: 20%;
       float: left;
+      text-align: left;
       li {
         display: block;
+        margin-bottom: 0.5em;
       }
     }
   }
