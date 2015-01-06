@@ -47,6 +47,18 @@ module.exports = function(grunt) {
       apache: {
         src: 'bower_components/apache-server-configs/dist/.htaccess',
         dest: '.htaccess'
+      },
+      jekyllAssets: {
+        expand: true,
+        cwd: 'img/',
+        src: '**',
+        dest: 'jekyll/assets/',
+        flatten: false,
+        filter: 'isFile'
+      },
+      jekyllCss: {
+        src: 'css/*.css',
+        dest: 'jekyll/css/'
       }
     }
   });
@@ -58,6 +70,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['sass']);
-  grunt.registerTask('serve-watch', ['connect', 'sass', 'watch'])
+  grunt.registerTask('serve-watch', ['connect', 'sass', 'watch']);
+  grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCss']);
 
 };
