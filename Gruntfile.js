@@ -49,16 +49,36 @@ module.exports = function(grunt) {
         dest: '.htaccess'
       },
       jekyllAssets: {
+        src: 'img/**/*',
+        dest: 'jekyll/'
+      },
+      jekyllCss: {
         expand: true,
-        cwd: 'img/',
+        cwd: 'css',
         src: '**',
-        dest: 'jekyll/assets/',
+        dest: 'jekyll/css/',
         flatten: false,
         filter: 'isFile'
       },
-      jekyllCss: {
-        src: 'css/*.css',
-        dest: 'jekyll/css/'
+      jQuery: {
+        src: 'bower_components/jquery/dist/jquery.min.js',
+        dest: 'js/jquery.min.js'
+      },
+      jQueryWaypoints: {
+        src: 'bower_components/jquery-waypoints/waypoints.min.js',
+        dest: 'js/waypoint.min.js'
+      },
+      jekyllJS: {
+        expand: true,
+        cwd: 'js/',
+        src: "**",
+        dest: 'jekyll/js/',
+        flatten: true,
+        filter: 'isFile'
+      },
+      jekyllFonts: {
+        src: 'fonts/',
+        dest: 'jekyll/'
       }
     }
   });
@@ -71,6 +91,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['sass']);
   grunt.registerTask('serve-watch', ['connect', 'sass', 'watch']);
-  grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCss']);
+  grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCss', 'copy:jekyllJS']);
 
 };

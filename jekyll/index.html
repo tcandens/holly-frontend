@@ -2,7 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+{% include header-main.html %}
+
+<main class="projects waypoint_darken">
+
+  <ul class="project-filter">
+    <li class="project-filter_category"><a href="#" class="project-filter_link">Print</a></li>
+    <li class="project-filter_category"><a href="#" class="project-filter_link">Web</a></li>
+    <li class="project-filter_category"><a href="#" class="project-filter_link">Branding</a></li>
+    <li class="project-filter_category"><a href="#" class="project-filter_link">Illustration</a></li>
+  </ul>
+
+  <ul class="project-list">
+    <div class="project-list_container">
+
+      {% for post in site.posts %}
+
+      <li class="project-list_item">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <h2 class="project-list_title">605 Magazine</h2>
+          <img src="img/thumbnails/{{ post.shortcode }}_name.svg" alt="" class="project-list_thumbnail" />
+          <div class="project-list_thumbnail-hover">
+            <img src="img/thumbnails/{{ post.shortcode }}_icon.svg" alt="" />
+          </div>
+        </a>
+
+      {% endfor %}
+
+    </div>
+  </ul>
+</main>
+
+
+<!-- <div class="home">
 
   <h1 class="page-heading">Posts</h1>
 
@@ -16,8 +48,8 @@ layout: default
         </h2>
       </li>
     {% endfor %}
-  </ul>
+  </ul> -->
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+</div> -->
