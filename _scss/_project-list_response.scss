@@ -88,5 +88,8 @@
 @include bp(desktop) {
 
   @include project-list-layout(1000px, 3, 40px);
+  .project-list {
+    margin-bottom: 0;
+  }
 
 }

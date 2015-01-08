@@ -705,7 +705,7 @@ p:first-of-type {
 .projects {
   position: relative;
   background: white;
-  overflow-y: hidden;
+  min-height: 100%;
   z-index: 1; }
 
 .project-list {
@@ -830,7 +830,10 @@ p:first-of-type {
 
   .project-list_thumbnail-hover img {
     width: 306.66667px;
-    height: 306.66667px; } }
+    height: 306.66667px; }
+
+  .project-list {
+    margin-bottom: 0; } }
 .project-filter {
   margin: 0 0 1em 0;
   padding: 0;
