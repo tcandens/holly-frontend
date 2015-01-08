@@ -58,10 +58,6 @@
   background-color: white;
 }
 
-/* ==================================================================================
-/*                                                                   PROJECT BLOCK
-/* ================================================================================ */
-
 $WW_headerbg: #f6e2d9;
 $WW_title: #9d4c43;
 
@@ -74,7 +70,7 @@ $WW_title: #9d4c43;
     $aspect: 0.898395722; // aspect = [image X] / [image Y]
     $width: 300px;
     @include build-figure($width, $aspect, 0.5);
-    background-image: url('../img/projects/walker-wedding/header-figure.png');
+    background-image: url('../img/projects/walker-wedding/header-flowers.png');
     @include bp(phablet) {
       @include build-figure($width, $aspect, 0.5);
     }
@@ -89,17 +85,16 @@ $WW_title: #9d4c43;
     color: $WW_title;
   }
   .header_divider {
+    // height: 3em;
+    // width: 3em;
     background-image: url('../img/projects/walker-wedding/icon-cake.png');
     &:before, &:after {
       background-color: $WW_title;
+      // top: auto !important;
       bottom: 0.5em;
     }
   }
 }
-
-/* ==================================================================================
-/*                                                                   PROJECT BLOCK
-/* ================================================================================ */
 
 $MOS_headerbg: #9eb1bb;
 $MOS_title: #de4344;
@@ -128,51 +123,12 @@ $MOS_title: #de4344;
     color: $MOS_title;
   }
   .header_divider {
+    // height: 3.5em;
+    // width: 4em;
     background-image: url('../img/projects/mos/icon.png');
     &:before, &:after {
       background-color: $MOS_title;
+      // top: auto !important;
     }
   }
 }
-
-/* ==================================================================================
-/*                                                                   PROJECT BLOCK
-/* ================================================================================ */
-
-$JULEP_headerbg: #c7a6c4;
-$JULEP_title: #fffefe;
-
-.project-julep {
-  .project_header {
-    background-color: $JULEP_headerbg;
-  }
-  .header_figure-right {
-    @include animation(kf_fade-up $animation_header-delay ease);
-    $aspect: 203 / 394; // aspect = [image X] / [image Y]
-    $width: 250px;
-    @include build-figure($width, $aspect, 0.5);
-    background-image: url('../img/projects/julep/header-figure.png');
-    @include bp(phablet) {
-      @include build-figure($width, $aspect, 0.5);
-    }
-    @include bp(tablet) {
-      @include build-figure($width, $aspect, 0.8);
-    }
-    @include bp(desktop) {
-      @include build-figure($width, $aspect, 1.2);
-    }
-  }
-  .header_title {
-    color: $JULEP_title;
-  }
-  .header_divider {
-    background-image: url('../img/projects/julep/icon.png');
-    &:before, &:after {
-      background-color: $JULEP_title;
-    }
-  }
-}
-
-/* ==================================================================================
-/*                                                                   PROJECT BLOCK
-/* ================================================================================ */
