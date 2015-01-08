@@ -705,7 +705,6 @@ p:first-of-type {
 .projects {
   position: relative;
   background: white;
-  overflow-y: hidden;
   z-index: 1; }
 
 .project-list {
@@ -1139,6 +1138,9 @@ p:first-of-type {
 .project_header {
   background-color: white; }
 
+/* ==================================================================================
+/*                                                                   PROJECT BLOCK
+/* ================================================================================ */
 .project-ww .project_header {
   background-color: #f6e2d9; }
 .project-ww .header_figure-right {
@@ -1147,7 +1149,7 @@ p:first-of-type {
   animation: kf_fade-down 2000ms ease;
   width: 150px;
   height: 166.96429px;
-  background-image: url("../img/projects/walker-wedding/header-flowers.png"); }
+  background-image: url("../img/projects/walker-wedding/header-figure.png"); }
   @media (min-width: 35em) and (max-width: 50em) {
     .project-ww .header_figure-right {
       width: 150px;
@@ -1168,6 +1170,9 @@ p:first-of-type {
     background-color: #9d4c43;
     bottom: 0.5em; }
 
+/* ==================================================================================
+/*                                                                   PROJECT BLOCK
+/* ================================================================================ */
 .project-mos .project_header {
   background-color: #9eb1bb; }
 .project-mos .header_figure-right {
@@ -1195,5 +1200,40 @@ p:first-of-type {
   background-image: url("../img/projects/mos/icon.png"); }
   .project-mos .header_divider:before, .project-mos .header_divider:after {
     background-color: #de4344; }
+
+/* ==================================================================================
+/*                                                                   PROJECT BLOCK
+/* ================================================================================ */
+.project-julep .project_header {
+  background-color: #c7a6c4; }
+.project-julep .header_figure-right {
+  -webkit-animation: kf_fade-up 2000ms ease;
+  -moz-animation: kf_fade-up 2000ms ease;
+  animation: kf_fade-up 2000ms ease;
+  width: 125px;
+  height: 242.61084px;
+  background-image: url("../img/projects/julep/header-figure.png"); }
+  @media (min-width: 35em) and (max-width: 50em) {
+    .project-julep .header_figure-right {
+      width: 125px;
+      height: 242.61084px; } }
+  @media (min-width: 50em) and (max-width: 70em) {
+    .project-julep .header_figure-right {
+      width: 200px;
+      height: 388.17734px; } }
+  @media (min-width: 70em) {
+    .project-julep .header_figure-right {
+      width: 300px;
+      height: 582.26601px; } }
+.project-julep .header_title {
+  color: #fffefe; }
+.project-julep .header_divider {
+  background-image: url("../img/projects/julep/icon.png"); }
+  .project-julep .header_divider:before, .project-julep .header_divider:after {
+    background-color: #fffefe; }
+
+/* ==================================================================================
+/*                                                                   PROJECT BLOCK
+/* ================================================================================ */
 
 /*# sourceMappingURL=main.css.map */
