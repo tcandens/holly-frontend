@@ -1,3 +1,7 @@
+$(function() {
+
+
+
 // Cut some mustard
 $('html').toggleClass('no-js').addClass('js-ready');
 
@@ -107,20 +111,25 @@ var projectItemHover = {
 projectItemHover.set();
 pushAbout.setPush();
 
-var $hamburger = $('.hamburger');
+})(jQuery);
 
-$('.waypoint_darken').waypoint(function() {
-  $hamburger.toggleClass('waypoint-action_darken');
-}, {
-  offset: function() {
-    return $hamburger.height();
-  }
-});
+$(function() {
 
-$('.waypoint_darken').next().waypoint(function() {
-  $hamburger.toggleClass('waypoint-action_darken');
-},{
-  offset: function() {
-    return $hamburger.height() * 1;
-  }
+  var $hamburger = $('.hamburger');
+
+  $('.waypoint_darken').waypoint(function() {
+    $hamburger.toggleClass('waypoint-action_darken');
+  }, {
+    offset: function() {
+      return $hamburger.height();
+    }
+  });
+
+  $('.waypoint_darken').next().waypoint(function() {
+    $hamburger.toggleClass('waypoint-action_darken');
+  },{
+    offset: function() {
+      return $hamburger.height() * 1;
+    }
+  });
 });

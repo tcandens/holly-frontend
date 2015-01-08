@@ -2,7 +2,7 @@
 .header-main {
   background-image: url('../img/header-main/bg.jpg');
   background-size: cover;
-  
+
   .header_figure-left {
     @include animation(kf_fade-up $animation_header-delay ease);
     $aspect: 0.622641509; // aspect = [image X] / [image Y]
@@ -11,9 +11,6 @@
     $width: 198px;
     @include build-figure($width, $aspect, 0.5);
     background-image: url('../img/header-main/chance-postit.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     @include bp(phablet) {
       @include build-figure($width, $aspect, 0.5);
     }

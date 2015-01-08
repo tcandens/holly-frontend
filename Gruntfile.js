@@ -27,6 +27,14 @@ module.exports = function(grunt) {
         options: {
          livereload: true
         }
+      },
+      jekyllCSS: {
+        files: '**/*.scss',
+        tasks: ['sass', 'copy:jekyllCSS']
+      },
+      jekyllJS: {
+        files: ['/js/**/*.js', '!js/concat.js'],
+        tasks: ['concat', 'copy:jekyllJS']
       }
     },
     connect: {
@@ -52,7 +60,7 @@ module.exports = function(grunt) {
         src: 'img/**/*',
         dest: 'jekyll/'
       },
-      jekyllCss: {
+      jekyllCSS: {
         expand: true,
         cwd: 'css',
         src: '**',
@@ -77,8 +85,10 @@ module.exports = function(grunt) {
         filter: 'isFile'
       },
       jekyllFonts: {
-        src: 'fonts/',
-        dest: 'jekyll/'
+        expand: true,
+        src: 'fonts/**',
+        dest: 'jekyll/',
+        filter: 'isFile'
       }
     }
   });
@@ -90,7 +100,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['sass']);
-  grunt.registerTask('serve-watch', ['connect', 'sass', 'watch']);
-  grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCss', 'copy:jekyllJS']);
+  grunt.registerTask('serve-watch', ['connect', 'sass', 'watch:css', 'watch:js']);
+  grunt.registerTask('watch-jekyll', ['sass', 'watch:jekyllCSS', 'watch:jekyllJS']);
+  grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCSS', 'copy:jekyllJS']);
 
 };

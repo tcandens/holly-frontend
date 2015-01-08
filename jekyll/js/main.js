@@ -1,3 +1,7 @@
+$(function() {
+
+
+
 // Cut some mustard
 $('html').toggleClass('no-js').addClass('js-ready');
 
@@ -106,3 +110,5 @@ var projectItemHover = {
 
 projectItemHover.set();
 pushAbout.setPush();
+
+})(jQuery);

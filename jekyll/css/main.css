@@ -331,7 +331,8 @@ ul {
   overflow: hidden; }
 
 .header_figure-left, .header_figure-right {
-  position: absolute; }
+  position: absolute;
+  background-size: cover; }
 
 .header_title-block {
   position: relative;
@@ -355,9 +356,10 @@ ul {
 
 .header_divider {
   position: relative;
-  width: 1em;
-  height: 1em;
+  width: 4em;
+  height: 3em;
   margin: 0 auto 1em auto;
+  padding: 0 0.2em;
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: content-box;
@@ -375,6 +377,29 @@ ul {
   .header_divider:after {
     left: 100%; }
 
+[class~="header_figure-"] {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.header_figure-left {
+  left: 0; }
+
+.header_figure-right {
+  right: 0; }
+
+.header_figure-bottom {
+  -webkit-animation: kf_fade-up 2000ms ease;
+  -moz-animation: kf_fade-up 2000ms ease;
+  animation: kf_fade-up 2000ms ease;
+  bottom: 0; }
+
+header_figure-top {
+  -webkit-animation: kf_fade-down 2000ms ease;
+  -moz-animation: kf_fade-down 2000ms ease;
+  animation: kf_fade-down 2000ms ease;
+  top: 0; }
+
 .header-main {
   background-image: url("../img/header-main/bg.jpg");
   background-size: cover; }
@@ -386,10 +411,7 @@ ul {
     bottom: 0.5em;
     width: 99px;
     height: 159.0px;
-    background-image: url("../img/header-main/chance-postit.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
+    background-image: url("../img/header-main/chance-postit.png"); }
     @media (min-width: 35em) and (max-width: 50em) {
       .header-main .header_figure-left {
         width: 99px;
@@ -1107,47 +1129,71 @@ p:first-of-type {
     .project .project-description-words {
       float: left;
       width: 80%; } }
-  .project .project-photo-container img {
+  .project img {
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto; }
 
 /* BELOW are per-project styles that should eventually be split into seperate files */
-.project-WW .project_header {
+.project_header {
+  background-color: white; }
+
+.project-ww .project_header {
   background-color: #f6e2d9; }
-.project-WW .header_figure-right {
+.project-ww .header_figure-right {
   -webkit-animation: kf_fade-down 2000ms ease;
   -moz-animation: kf_fade-down 2000ms ease;
   animation: kf_fade-down 2000ms ease;
-  right: 0;
-  top: 0;
   width: 150px;
   height: 166.96429px;
-  background-image: url("../img/projects/walker-wedding/header-flowers.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
+  background-image: url("../img/projects/walker-wedding/header-flowers.png"); }
   @media (min-width: 35em) and (max-width: 50em) {
-    .project-WW .header_figure-right {
+    .project-ww .header_figure-right {
       width: 150px;
       height: 166.96429px; } }
   @media (min-width: 50em) and (max-width: 70em) {
-    .project-WW .header_figure-right {
+    .project-ww .header_figure-right {
       width: 240px;
       height: 267.14286px; } }
   @media (min-width: 70em) {
-    .project-WW .header_figure-right {
+    .project-ww .header_figure-right {
       width: 360px;
       height: 400.71429px; } }
-.project-WW .header_title {
+.project-ww .header_title {
   color: #9d4c43; }
-.project-WW .header_divider {
-  height: 3em;
-  width: 3em;
+.project-ww .header_divider {
   background-image: url("../img/projects/walker-wedding/icon-cake.png"); }
-  .project-WW .header_divider:before, .project-WW .header_divider:after {
+  .project-ww .header_divider:before, .project-ww .header_divider:after {
     background-color: #9d4c43;
     bottom: 0.5em; }
+
+.project-mos .project_header {
+  background-color: #9eb1bb; }
+.project-mos .header_figure-right {
+  -webkit-animation: kf_fade-up 2000ms ease;
+  -moz-animation: kf_fade-up 2000ms ease;
+  animation: kf_fade-up 2000ms ease;
+  width: 125px;
+  height: 242.61084px;
+  background-image: url("../img/projects/mos/header-figure.png"); }
+  @media (min-width: 35em) and (max-width: 50em) {
+    .project-mos .header_figure-right {
+      width: 125px;
+      height: 242.61084px; } }
+  @media (min-width: 50em) and (max-width: 70em) {
+    .project-mos .header_figure-right {
+      width: 200px;
+      height: 388.17734px; } }
+  @media (min-width: 70em) {
+    .project-mos .header_figure-right {
+      width: 300px;
+      height: 582.26601px; } }
+.project-mos .header_title {
+  color: #de4344; }
+.project-mos .header_divider {
+  background-image: url("../img/projects/mos/icon.png"); }
+  .project-mos .header_divider:before, .project-mos .header_divider:after {
+    background-color: #de4344; }
 
 /*# sourceMappingURL=main.css.map */

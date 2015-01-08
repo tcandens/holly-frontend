@@ -1,15 +1,60 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<html>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+{% include head.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+<body class="page-project project-{{ page.shortcode }}">
 
-</div>
+  {% include nav.html %}
+
+  <div class="container">
+    {% include hamburger.html %}
+
+    <header class="header project_header">
+
+      {% if page.headerPos %}
+
+          <div class="{% for position in page.headerPos %}header_figure-{{ position }} {% endfor %} "></div>
+
+      {% endif %}
+
+      <section class="header_title-block">
+
+        <div class="header_divider"></div>
+
+        <h1 class="header_title">{{ page.title }}</h1>
+
+      </section>
+
+    </header>
+
+    <main class="project waypoint_darken">
+
+      <article class="project-description">
+
+        <ul class="project-description-categories">
+          {% for item in page.categories %}
+          <li>{{ item | capitalize }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if page.description %}
+        <div class="project-description-words">
+          <p>{{ page.description }}</p>
+        </div>
+        {% endif %}
+
+      </article>
+
+      {{ content }}
+
+    </main>
+
+  {% include about.html %}
+
+  </div>
+
+  {% include enqueue.html %}
+</body>
+
+</html>

@@ -9,6 +9,7 @@
 
 .header_figure-left, .header_figure-right {
   position: absolute;
+  background-size: cover;
 }
 
 .header_title-block {
@@ -30,9 +31,11 @@
 }
 .header_divider {
   position: relative;
-  width: 1em;
-  height: 1em;
+  $width: 4em;
+  width: $width;
+  height: $width * 0.75;
   margin: 0 auto 1em auto;
+  padding: 0 0.2em;
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: content-box;
@@ -54,4 +57,24 @@
     // top: 50%;
     left: 100%;
   }
+}
+
+[class~="header_figure-"] {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.header_figure-left {
+  left: 0;
+}
+.header_figure-right {
+  right: 0;
+}
+.header_figure-bottom {
+  @include animation(kf_fade-up $animation_header-delay ease);
+  bottom: 0;
+}
+header_figure-top {
+  @include animation(kf_fade-down $animation_header-delay ease);
+  top: 0;
 }
