@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="page-project project-{{ page.shortcode }}">
+
+  {% include nav.html %}
+
+  {% include hamburger.html %}
+
+  <div class="container">
+
+    <header class="header project_header">
+
+      {% if page.headerPos %}
+
+          <div class="{% for position in page.headerPos %}header_figure-{{ position }} {% endfor %} "></div>
+
+      {% endif %}
+
+      <section class="header_title-block">
+
+        <div class="header_divider"></div>
+
+        <h1 class="header_title">{{ page.title }}</h1>
+
+      </section>
+
+    </header>
+
+    <main class="project waypoint_darken">
+
+      <article class="project-description">
+
+        <ul class="project-description-categories">
+          {% for item in page.categories %}
+          <li>{{ item | capitalize }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if page.description %}
+        <div class="project-description-words">
+          <p>{{ page.description }}</p>
+        </div>
+        {% endif %}
+
+      </article>
+
+      {{ content }}
+
+    </main>
+
+  {% include about.html %}
+
+  </div>
+
+  {% include enqueue.html %}
+</body>
+
+</html>
