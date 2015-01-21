@@ -15,15 +15,29 @@
 
       {% if page.headerPos %}
 
-          <div class="{% for position in page.headerPos %}header_figure-{{ position }} {% endfor %} "></div>
+        {% for items in page.headerPos %}
 
+          {% if items.size > 1 %}
+            <div class="{% for directions in items %}header_figure-{{ directions }} {% endfor %}"></div>
+          {% else %}
+            <div class="header_figure-{{ items }}"></div>
+          {% endif %}
+        {% endfor %}
       {% endif %}
 
       <section class="header_title-block">
 
         <div class="header_divider"></div>
 
-        <h1 class="header_title">{{ page.title }}</h1>
+        <h1 class="header_title">
+
+          {% if page.titleArticle %}
+          <span class="title_article">{{ page.titleArticle }}</span>
+          {% endif %}
+
+          {{ page.title }}
+
+        </h1>
 
       </section>
 

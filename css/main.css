@@ -1155,26 +1155,43 @@ p:first-of-type {
   background-color: white; }
 
 .project-ww .project_header {
-  background-color: #f6e2d9; }
+  background-color: #f6e2d9;
+  background-image: url("../img/projects/walker-wedding/bg.jpg"); }
 .project-ww .header_figure-right {
   -webkit-animation: kf_fade-down 2000ms ease;
   -moz-animation: kf_fade-down 2000ms ease;
   animation: kf_fade-down 2000ms ease;
   width: 150px;
-  height: 166.96429px;
-  background-image: url("../img/projects/walker-wedding/header-flowers.png"); }
+  height: 112.5px;
+  background-image: url("../img/projects/walker-wedding/header-figure_right.png"); }
   @media (min-width: 35em) and (max-width: 50em) {
     .project-ww .header_figure-right {
       width: 150px;
-      height: 166.96429px; } }
+      height: 112.5px; } }
   @media (min-width: 50em) and (max-width: 70em) {
     .project-ww .header_figure-right {
       width: 240px;
-      height: 267.14286px; } }
+      height: 180px; } }
   @media (min-width: 70em) {
     .project-ww .header_figure-right {
       width: 360px;
-      height: 400.71429px; } }
+      height: 270px; } }
+.project-ww .header_figure-left {
+  width: 200px;
+  height: 150px;
+  background-image: url("../img/projects/walker-wedding/header-figure_left.png"); }
+  @media (min-width: 35em) and (max-width: 50em) {
+    .project-ww .header_figure-left {
+      width: 200px;
+      height: 150px; } }
+  @media (min-width: 50em) and (max-width: 70em) {
+    .project-ww .header_figure-left {
+      width: 320px;
+      height: 240px; } }
+  @media (min-width: 70em) {
+    .project-ww .header_figure-left {
+      width: 480px;
+      height: 360px; } }
 .project-ww .header_title {
   color: #9d4c43; }
 .project-ww .header_divider {
