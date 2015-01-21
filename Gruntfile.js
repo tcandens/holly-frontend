@@ -35,6 +35,10 @@ module.exports = function(grunt) {
       jekyllJS: {
         files: ['/js/**/*.js', '!js/concat.js'],
         tasks: ['concat', 'copy:jekyllJS']
+      },
+      jekyllAll: {
+        files: ['_scss/**/*.scss', 'js/**/*.js', '!js/concat.js'],
+        tasks: ['sass', 'concat', 'copy:jekyllCSS', 'copy:jekyllJS']
       }
     },
     connect: {
@@ -101,7 +105,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['sass']);
   grunt.registerTask('serve-watch', ['connect', 'sass', 'watch:css', 'watch:js']);
-  grunt.registerTask('watch-jekyll', ['sass', 'watch:jekyllCSS', 'watch:jekyllJS']);
+  grunt.registerTask('watch-jekyll', ['sass', 'concat', 'watch:jekyllAll']);
   grunt.registerTask('prepJekyll', ['copy:jekyllAssets', 'copy:jekyllCSS', 'copy:jekyllJS']);
 
 };
