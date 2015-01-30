@@ -1,0 +1,35 @@
+@mixin bp($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 50em) and (max-width: 70em) { @content ; }
+  }
+  @else if $point == tabletplus {
+    @media (min-width: 50em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 35em) and (max-width: 50em)  { @content ; }
+  }
+  @else if $point == phabletplus {
+    @media (min-width: 35em) { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 35em)  { @content ; }
+  }
+  @else if $point == mobileplus {
+    @media (min-width: 35em) { @content ; }
+  }
+  @else if $point == landscape {
+    @media screen and (max-width: 50em) and (orientation: landscape) { @content ; }
+  }
+}
+
+// Inject logic for easier @mediaqueries for scaling figures
+@mixin build-figure($width, $ratio, $scalar: 1, $weight: 1) {
+  width: $width * $weight * $scalar;
+  height: ( $width / $ratio ) * $weight * $scalar;
+}

@@ -1,0 +1,28 @@
+html, body {
+  font-family: $quicksand;
+  font-size: 1.1em;
+  font-weight: 200;
+  line-height: 1;
+  @include bp(tablet) {
+    font-size: 1.2em;
+  }
+  @include bp(desktop) {
+    font-size: 1.5em;
+  }
+}
+
+h1, h2 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: $futura;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}

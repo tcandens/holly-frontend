@@ -14,3 +14,5 @@ github_username:  jekyll
 markdown: kramdown
 include: [fonts]
 # keep_files: [fonts]
+sass:
+  sass_dir: _sass

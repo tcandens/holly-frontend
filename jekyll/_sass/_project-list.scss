@@ -1,0 +1,70 @@
+// /* Project list grid variables */
+// $list-width: 320px;
+// $columns: 1; // The number of list items in the first row
+// $pseudo-columns: $columns * 2 - 1; // The number of items the are needed to make two rows. First Row = 3; Second Row = 2; 3 + 3-1 = 3*2 -1
+// $margin: 50px; // margin-right value for all list items
+// $margin-total: ($columns - 1) * $margin; // Total of margins within the list viewport
+// $item-diameter: ( $list-width - $margin-total ) / $columns; // Size of list items as calculated with widths of list margin and number of columns
+// $container-width: $item-diameter * $pseudo-columns + ( $margin * $pseudo-columns ); // The width of overflow container within list viewport
+
+.projects {
+  position: relative;
+  // padding-top: 1em;
+  background: white;
+  // overflow-y: hidden;
+  min-height: 100%;
+  z-index: 1;
+  // box-shadow: 0px 15px 30px lighten($grey, 20%);
+}
+
+.project-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.project-list_container { // Container within the project-list 'viewport' that allows rows to overflow, be hidden, and then split
+  padding: 1em;
+  width: 100%;
+  @include bp(mobileplus) {
+    padding: 0;
+  }
+}
+.project-list_item {
+  display: block;
+  position: relative;
+  // margin: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.project-list_title {
+  position: absolute;
+  opacity: 0;
+}
+.project-list_thumbnail {
+  width: 100%;
+  height: 100%;
+}
+.project-list_thumbnail-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  @include transition(opacity 300ms);
+}
+.hover .project-list_thumbnail-hover {
+  opacity: 0;
+}

@@ -1,0 +1,236 @@
+$footer-height: 120px;
+
+.push-about {
+  position: relative;
+  z-index: -200;
+}
+.about {
+  position: fixed;
+  bottom: 0;
+  z-index: -100;
+  // margin-bottom: -$footer-height;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-image: url('../img/header-main/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $grey;
+}
+.about-center {
+  padding-top: 2em;
+//   position: relative;
+//   margin-top: 50%;
+//   @include transform(translate3d(0,-50%,0));
+}
+
+.about:after {
+  display: block;
+  content: "";
+}
+.contact-icons {
+  margin: 0;
+  // margin-bottom: 1em;
+  // padding-top: 2em;
+  list-style: none;
+  text-align: center;
+  @include clearfix();
+}
+
+.contact-icons_item {
+  display: inline-block;
+  position: relative;
+  $dimension: 100px;
+  width: $dimension;
+  height: $dimension;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background-image: url('../img/hireme.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    @include transition(all 300ms ease);
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  @include bp(phabletplus) {
+    $dimension: 180px;
+    width: $dimension;
+    height: $dimension;
+  }
+}
+
+.contact-icons_item-link {
+  display: block;
+  position: relative;
+  border: 0;  // IR
+  font: 0/0 a;  // IR
+  text-shadow: none; // IR
+  color: transparent;  // IR
+  background-color: transparent;  // IR
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &[data-link='phone'] {
+    background-image: url('../img/phone-icon.svg');
+  }
+  &[data-link="resume"] {
+    background-image: url('../img/resume-icon.svg');
+  }
+  &[data-link="email"] {
+    background-image: url('../img/email-icon.svg');
+  }
+}
+
+.about-copy {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center;
+  p {
+    font-size: 0.7em;
+    margin: 0 auto;
+    max-width: 27em;
+    // margin-bottom: 1em;
+    @include bp(landscape) {
+      max-width: 100%;
+    }
+  }
+  @include bp(tabletplus) {
+    padding: 0;
+  }
+}
+.about-headline {
+  margin-bottom: 0.5em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // height: $footer-height;
+  background: $pink;
+  @include bp(mobileonly) {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+}
+// .about:after, .footer {
+//   height: $footer-height;
+// }
+
+.social-icons {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  list-style:  none;
+  text-align: center;
+  @include bp(phabletplus) {
+    display: block;
+  }
+}
+.social-icons_item {
+  display: table-cell;
+  padding: 10px;
+  $dimension: 100px;
+  width: $dimension;
+  height: $dimension;
+  // float: left;
+  @include bp(phablet) {
+    $dimension: 80px;
+    width: $dimension;
+    height: $dimension;
+  }
+  @include bp(phabletplus) {
+    display: inline-block;
+  }
+  @include bp(tabletplus) {
+    $dimension: 100px;
+    width: $dimension;
+    height: $dimension;
+  }
+}
+.social-icons_link {
+  display: block;
+  $dimension: 70px;
+  width: $dimension;
+  height: $dimension;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include hide-text;
+  &[href^="http://www.facebook"] {
+    // background-color: $icon-facebook;
+    background-image: url('../img/icons/facebook.svg');
+  }
+  &[href^="http://www.twitter"] {
+    background-image: url('../img/icons/twitter.svg');
+    // background-color: $icon-twitter;
+  }
+  &[href^="http://www.linkedin"] {
+    // background-color: $icon-linkedin;
+    background-image: url('../img/icons/linkedin.svg');
+  }
+  &[href^="http://www.tumblr.com"] {
+    // background-color: $icon-tumblr;
+    background-image: url('../img/icons/tumblr.svg');
+  }
+  &[href^="http://www.instagram.com"] {
+    // background-color: $icon-instagram;
+    background-image: url('../img/icons/instagram.svg');
+  }
+  @include bp(desktop) {
+    border-radius: 100%;
+    border: 20px solid $pink;
+    &:hover {
+      background-color: $pink;
+      background-size: cover;
+      border-radius: 0;
+      border: 0;
+    }
+    &[href^="http://www.facebook"] {
+      background-color: $icon-facebook;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.twitter"] {
+      background-color: $icon-twitter;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.linkedin"] {
+      background-color: $icon-linkedin;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.tumblr.com"] {
+      background-color: $icon-tumblr;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &[href^="http://www.instagram.com"] {
+      background-color: $icon-instagram;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+  }
+}

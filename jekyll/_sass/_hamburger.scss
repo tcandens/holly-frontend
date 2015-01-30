@@ -1,0 +1,48 @@
+.hamburger {
+  position: fixed;
+  top: 1em;
+  right: 0;
+  cursor: pointer;
+  margin: 1em;
+  $width: 3em;
+  $stroke: 0.5em;
+  width: $width;
+  height: $width;
+  z-index: 10;
+  span, span:before, span:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $stroke;
+    cursor: pointer;
+    border-radius: 1px;
+    background: white;
+    @include transition(all 300ms $ease-out-cubic);
+  }
+  span:before {
+    top: -($stroke * 2);
+  }
+  span:after {
+    bottom: -($stroke * 2);
+  }
+  &.hamburger-active span {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &.hamburger-active span:before, &.hamburger-active span:after {
+    top: 0;
+  }
+  &.hamburger-active span:before {
+    @include transform(rotate(45deg));
+  }
+  &.hamburger-active span:after {
+    @include transform(rotate(-45deg));
+  }
+}
+
+.waypoint-action_darken {
+  span, span:before, span:after {
+    background: $grey;
+  }
+}

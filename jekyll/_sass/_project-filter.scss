@@ -1,0 +1,86 @@
+.project-filter {
+  margin: 0 0 1em 0;
+  padding: 0;
+  width: 100%;
+  background: white;
+  text-align: center;
+  @include clearfix();
+}
+.project-filter_category {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0.3em 1em;
+  font-family: $futura;
+  color: white;
+  @include transition(all 300ms ease);
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:nth-child(1) {
+    background-color: lighten($icon-facebook, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-facebook, 20%);
+    }
+  }
+  &:nth-child(2) {
+    background-color: lighten($icon-twitter, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-twitter, 20%);
+    }
+  }
+  &:nth-child(3) {
+    background-color: lighten($icon-instagram, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-instagram, 20%);
+    }
+  }
+  &:nth-child(4) {
+    background-color: lighten($icon-linkedin, 20%);
+    &:hover {
+      background-color: transparent;
+      color: lighten($icon-linkedin, 20%);
+    }
+  }
+  @include bp(phabletplus) {
+    width: 25%;
+    // color: $offblack !important;
+    // background-color: white !important;
+    &:nth-child(1) {
+      background-color: transparent;
+      color: lighten($icon-facebook, 20%);
+      &:hover {
+        background-color: lighten($icon-facebook, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(2) {
+      background-color: transparent;
+      color: lighten($icon-twitter, 20%);
+      &:hover {
+        background-color: lighten($icon-twitter, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(3) {
+      background-color: transparent;
+      color: lighten($icon-instagram, 20%);
+      &:hover {
+        background-color: lighten($icon-instagram, 20%);
+        color: white;
+      }
+    }
+    &:nth-child(4) {
+      background-color: transparent;
+      color: lighten($icon-linkedin, 20%);
+      &:hover {
+        background-color: lighten($icon-linkedin, 20%);
+        color: white;
+      }
+    }
+  }
+}
